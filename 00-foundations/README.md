@@ -1,0 +1,50 @@
+# Stage 0 — Foundations
+
+**Time budget:** 2–3 weeks part-time / 1 week full-time
+
+## Objectives
+
+By the end of this stage you should be able to live comfortably in a Linux
+terminal, write small Bash scripts, use Git for real version control, build
+C code with GCC/Make/CMake, debug with GDB, catch memory bugs with Valgrind,
+and be functional with Docker and SSH. This stage is tooling — it exists so
+nothing in Stage 1 onward is blocked by "how do I even run this."
+
+## Topics & resources
+
+| # | Topic | Free Resource |
+|---|---|---|
+| 01 | Linux terminal & CLI | [Linux Journey](https://linuxjourney.com/) |
+| 02 | Shell fundamentals | [MIT Missing Semester](https://missing.csail.mit.edu/) |
+| 03 | Bash scripting | [Bash Guide (Greg's Wiki)](https://mywiki.wooledge.org/BashGuide) |
+| 04 | Git | [Pro Git book](https://git-scm.com/book/en/v2) |
+| 05 | Editors (Vim/Neovim/VS Code) | [Vim Adventures free tier](https://vim-adventures.com/) + [Neovim docs](https://neovim.io/doc/) |
+| 06 | GCC/Clang, Make | [GNU Make Manual](https://www.gnu.org/software/make/manual/make.html) |
+| 07 | CMake | [CMake official tutorial](https://cmake.org/cmake/help/latest/guide/tutorial/index.html) |
+| 08 | GDB | [Beej's GDB Quick Start](https://beej.us/guide/bggdb/) |
+| 09 | Valgrind | [Valgrind Quick Start](https://valgrind.org/docs/manual/quick-start.html) |
+| 10 | Docker | [Docker Official Docs](https://docs.docker.com/get-started/) |
+| 11 | SSH | [SSH Essentials (DigitalOcean)](https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys) |
+| 12 | Practice | [OverTheWire: Bandit](https://overthewire.org/wargames/bandit/) |
+
+## Projects
+
+| # | Project | Folder |
+|---|---|---|
+| 0.1 | Dotfiles repo | `projects/0.1-dotfiles-repo/` |
+| 0.2 | Linux workstation setup script | `projects/0.2-workstation-setup/` |
+| 0.3 | Small bash automation scripts | `projects/0.3-bash-automation/` |
+| 0.4 | File organizer script | `projects/0.4-file-organizer/` |
+| 0.5 | Backup utility script | `projects/0.5-backup-utility/` |
+
+Folders are numbered `{stage}.{project}` so it stays unambiguous once later
+stages have projects of their own. `SPEC.md` for each gets generated on
+demand when you actually reach that project, not all at once — the folders
+above are scaffolded ahead of time, but most are empty until then.
+
+## Note on environment
+
+You're on Windows. For a Linux-native feel (needed for Bandit, real Bash,
+POSIX tools), you'll want either WSL2 (Ubuntu) or a Docker container as your
+day-to-day shell for this stage onward — we'll set that up as part of
+Lecture 01.
