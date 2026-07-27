@@ -1,0 +1,38 @@
+> **Generated ahead of schedule** (2026-07-27, per learner request). Revisit
+> when actually reached.
+
+# Project 17.2 — IOC Parser
+
+## Goal
+
+A Python reimplementation/extension of Stage 12's IOC extractor — but
+now built to parse **structured threat-intel formats** (e.g. STIX/TAXII-
+style JSON, or simpler CSV feeds) rather than just raw strings out of a
+binary. The shift here is from "extract indicators from one sample" to
+"normalize indicators from many different external sources."
+
+## Requirements
+
+1. Parses IOCs from at least two different structured input formats
+   (e.g. a STIX bundle and a plain CSV feed) into one common internal
+   representation.
+2. Normalizes indicator types consistently (an IP is always represented
+   the same way regardless of which input format it came from).
+3. Deduplicates indicators that appear across multiple input sources.
+4. Outputs a single, unified report (JSON/CSV) combining all sources.
+
+## Acceptance criteria
+
+- [ ] Runs cleanly against real or realistic sample data in both input
+      formats, paste the unified output
+- [ ] Deduplication demonstrated: an indicator appearing in both input
+      sources shows up once in the output, not twice
+- [ ] `git log` shows iteration
+- [ ] README documenting the two input formats supported and the common
+      internal schema chosen
+
+## When done
+
+Point me at the source + `git log`. I'll check the normalization logic
+— is an IP really recognized as the same indicator regardless of source
+formatting quirks (leading zeros, CIDR notation vs. plain, etc.)?

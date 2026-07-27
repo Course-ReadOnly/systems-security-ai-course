@@ -43,7 +43,9 @@ a real skillset.
 | Practice environment | [OverTheWire: Bandit](https://overthewire.org/wargames/bandit/) — free wargame for terminal fluency |
 
 **Projects:** dotfiles repo, Linux workstation setup script, small bash
-automation scripts, a file organizer script, a backup utility script.
+automation scripts, a file organizer script, a backup utility script, and a
+capstone tying all of the above together (added 2026-07-26, see
+`00-foundations/README.md`).
 
 ---
 

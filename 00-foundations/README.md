@@ -36,11 +36,24 @@ nothing in Stage 1 onward is blocked by "how do I even run this."
 | 0.3 | Small bash automation scripts | `projects/0.3-bash-automation/` |
 | 0.4 | File organizer script | `projects/0.4-file-organizer/` |
 | 0.5 | Backup utility script | `projects/0.5-backup-utility/` |
+| 0.6 | Capstone: tie 0.1-0.5 together | `projects/0.6-capstone/` |
 
 Folders are numbered `{stage}.{project}` so it stays unambiguous once later
 stages have projects of their own. `SPEC.md` for each gets generated on
 demand when you actually reach that project, not all at once — the folders
 above are scaffolded ahead of time, but most are empty until then.
+
+**0.6 (added 2026-07-26, not in the original ROADMAP.md project list):** a
+capstone combining the dotfiles repo, workstation setup script, bash
+automation scripts, file organizer, and backup utility into one coherent
+setup — likely a single entry-point script that calls into the others,
+mirroring how `0.2`'s `setup.sh` already calls into `0.1`'s `install.sh`.
+Exact spec TBD when reached, per the same on-demand rule as everything else.
+
+On the learner's WSL machine, each numbered project lives as its own git
+repo under `~/00-foundations-project/{n.n-name}/` (e.g.
+`~/00-foundations-project/0.1-dotfiles-repo/`) — separate repos, not one
+monorepo, so each project's `git log` stays scoped to that project.
 
 ## Note on environment
 

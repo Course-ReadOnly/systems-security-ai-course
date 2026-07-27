@@ -1,0 +1,4 @@
+The quick brown fox jumps over the lazy dog.
+The dog barks at the fox.
+A much longer line here just to test the longest-line detection properly, since short lines won't prove much.
+Fox fox fox.

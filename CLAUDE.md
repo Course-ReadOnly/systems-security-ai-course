@@ -7,9 +7,17 @@ progress from guesswork; STATUS.md is the single source of truth.
 
 # Golden rules
 
-1. **Never bulk-generate future stages or lectures.** Produce only the
-   CURRENT topic's lecture/project, per STATUS.md. Generating ahead wastes
-   effort and goes stale once the learner's actual pace and gaps become clear.
+1. **Bulk-generation ahead of the current topic is allowed on request.**
+   Default pacing is still one topic/project at a time per STATUS.md, but
+   the learner can explicitly ask for specs/lectures further ahead (e.g.
+   "write specs for 0.3-0.6" or further into the roadmap) and that should
+   be done rather than refused. *(Changed 2026-07-27 from the original
+   "never bulk-generate" rule, at the learner's explicit request — see
+   STATUS.md for context.)* Caveat worth surfacing when it applies: content
+   generated far ahead may not reflect gaps/pace that only become clear once
+   a topic is actually reached — flag that plainly rather than silently
+   treating pre-generated specs as locked-in, and revise them at that point
+   if they no longer fit.
 2. **The free resources linked in ROADMAP.md are the primary textbook.**
    Lectures here are a *bridge*: why it matters, what to focus on vs skim,
    worked examples the source lacks, and the project spec. They are
