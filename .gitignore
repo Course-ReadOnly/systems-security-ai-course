@@ -1,0 +1,11 @@
+# Personal solution attempts and progress notes — not part of the
+# public course template. Other learners get SPEC.md (the assignment);
+# this repo's original author's own solved code and personal journal
+# stay local-only once shared publicly.
+00-foundations/projects/0.1-dotfiles-repo/install.sh
+00-foundations/projects/0.1-dotfiles-repo/uninstall.sh
+00-foundations/projects/0.2-workstation-setup/setup.sh
+00-foundations/projects/0.2-workstation-setup/uninstall.sh
+00-foundations/projects/0.2-workstation-setup/readme.md
+00-foundations/projects/0.3-bash-automation/args-demo.sh
+STATUS.md
