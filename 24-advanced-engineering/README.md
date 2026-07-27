@@ -26,6 +26,13 @@ not a good place to be catching up on C fundamentals.
 **Topics:** LLVM, compilers, hypervisors, UEFI, eBPF, Linux kernel,
 Windows internals (deep dive), GPU programming, CUDA, Rust.
 
+**Worth knowing while you're here:** the kernel/user and guest/host
+boundaries this stage works in (24.3's hypervisor, 24.4's kernel module)
+are exactly where real mitigations for Stage 4's side-channel concerns
+live — e.g. KPTI (kernel page-table isolation), added kernel-wide after
+Meltdown specifically to stop user-space from using cache timing to
+infer kernel memory contents. See `SECURITY-CONCEPTS.md`.
+
 ## Projects
 
 | # | Project | Folder |

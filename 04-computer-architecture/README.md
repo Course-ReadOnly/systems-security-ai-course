@@ -24,6 +24,14 @@ executes, and Stage 8 (OS) assumes this mental model already exists.
 **Topics:** binary, logic gates, CPU, registers, ALU, pipelines, cache,
 memory, interrupts, MMU.
 
+**Worth knowing while you're here:** the two mechanisms that make modern
+CPUs fast — speculative execution and caching — are exactly what
+Spectre/Meltdown-class side-channel attacks exploit. See
+`SECURITY-CONCEPTS.md`'s "Side-Channel Attacks" entry. No project below
+builds a working exploit for this (it's a genuinely advanced, ongoing
+research area), but understanding *why* these mechanisms create a leak
+is a real gap if skipped, not a footnote.
+
 ## Projects
 
 | # | Project | Folder |

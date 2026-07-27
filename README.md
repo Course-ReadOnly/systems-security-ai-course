@@ -13,6 +13,7 @@ than rubber-stamped.
 | [`LEARNING_GUIDE.md`](LEARNING_GUIDE.md) | How to actually use this course: realistic time expectations, what to prioritize, evidence-over-self-reporting norms |
 | [`STATUS.md`](STATUS.md) | Live progress: current stage/project, completed work, logged weak spots — the single source of truth for "where things are" |
 | [`CLAUDE.md`](CLAUDE.md) | Operating instructions for Claude Code acting as instructor — pacing rules, review standards, teaching mode |
+| [`SECURITY-CONCEPTS.md`](SECURITY-CONCEPTS.md) | Cross-cutting reference for the vulnerability classes/principles referenced throughout project specs' "Security relevance" sections |
 
 ## Structure
 

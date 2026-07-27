@@ -59,6 +59,19 @@ using a different AI, or none, apply the same discipline yourself: several
 genuine attempts and the linked resource before reaching for a full
 solution.
 
+## Security concepts, referenced not repeated
+
+Most project specs — including ones well before the dedicated security
+stages (11-14) — include a "Security relevance" section tying that
+project's concept to a real vulnerability class or exploitation
+technique. Rather than re-explain each concept inline every time it
+recurs, those sections point to `SECURITY-CONCEPTS.md`, a single
+reference covering memory safety, mitigation bypasses (and why ROP
+exists), race conditions, injection, crypto misuse, and more. Read the
+relevant entry when a spec points you there — it's meant to build a
+coherent mental model across the whole course, not just decorate
+individual projects with buzzwords.
+
 ## Sample data
 
 `samples/` holds small, reusable test fixtures (sample text, etc.) for
