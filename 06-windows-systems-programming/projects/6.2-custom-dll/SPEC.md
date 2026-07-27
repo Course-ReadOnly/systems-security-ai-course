@@ -39,6 +39,13 @@ import/export views meaningful later, rather than just names on a screen.
 - [ ] README explaining the difference between what you did here
       (dynamic loading) and static/load-time linking, in your own words
 
+## Security relevance
+
+The exact loader behavior you just used deliberately (`LoadLibrary`
+resolving a DLL by name) is what DLL hijacking/search-order hijacking
+abuses maliciously — an attacker placing a malicious DLL somewhere the
+loader will find it before the real one. See `SECURITY-CONCEPTS.md`.
+
 ## When done
 
 Point me at the source + `git log` plus the `dumpbin` output. I'll check

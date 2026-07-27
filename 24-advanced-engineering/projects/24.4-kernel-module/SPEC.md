@@ -37,6 +37,14 @@ real consequences for mistakes.
 - [ ] README documenting what the module does and confirming the VM
       safety precaution
 
+## Security relevance
+
+Same caution as Stage 8.3, at higher stakes on a real modern kernel:
+any user-space-facing interface this module exposes (a `/proc` entry,
+an ioctl) needs the same never-trust-the-caller discipline. Dirty COW
+(CVE-2016-5195 — see `SECURITY-CONCEPTS.md`) is what happens when a
+real kernel gets this wrong.
+
 ## When done
 
 Point me at the source + `git log` and the repeated-cycle evidence.

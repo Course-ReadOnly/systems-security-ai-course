@@ -26,7 +26,11 @@ This is the concrete mechanics behind everything you've been calling
    their results.
 5. Basic argument validation in the kernel-side handler (don't trust
    user-space pointers/values blindly) — this is a real security
-   principle (never trust the caller), not busywork.
+   principle (never trust the caller), not busywork. **Dirty COW**
+   (CVE-2016-5195, see `SECURITY-CONCEPTS.md`'s "Kernel-Space TOCTOU"
+   entry) is the canonical example of exactly this class of mistake
+   causing a real, long-lived root-privilege-escalation vulnerability
+   in a production kernel.
 
 ## Acceptance criteria
 

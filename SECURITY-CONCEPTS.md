@@ -160,6 +160,50 @@ sections. Written once here rather than re-explained inline every time
   benign" with the same suspicion as any other attacker-controlled
   claim. *Where:* Stage 22 (all four projects), Stage 23 (all seven).
 
+## DLL Hijacking / Search-Order Hijacking
+
+- Windows resolves a DLL by name through a search order (application
+  directory, system directories, `PATH`, ...). If an attacker can place
+  a malicious DLL somewhere earlier in that search order than the
+  legitimate one — or exploit an application that loads a DLL by name
+  without specifying a full, trusted path — their code gets loaded and
+  executed with the victim application's privileges, no exploit
+  "bug" required, just abuse of normal loader behavior. This is a
+  real, common technique in actual malware persistence and privilege
+  escalation. *Where:* directly relevant to Stage 6.2 (you'll understand
+  exactly why `LoadLibrary`'s resolution behavior is dangerous once
+  you've built and loaded a DLL yourself) and Stage 12.
+
+## Living-Off-The-Land (LOLBins) and Signature Evasion
+
+- Attackers increasingly avoid dropping custom malware binaries at all,
+  instead abusing legitimate, pre-installed system tools (PowerShell,
+  `certutil`, `rundll32`, `mshta`, and many others — informally "LOLBins")
+  to download payloads, execute code, or exfiltrate data. A hash-based
+  or filename-based detection rule is structurally blind to this,
+  because nothing "malicious" was ever written to disk — only a
+  legitimate signed binary doing something it can legitimately do. This
+  is the core argument for *behavioral* detection (what a process did,
+  in what sequence, with what parent) over purely signature-based
+  detection. *Where:* directly relevant to Stage 14.1 (write at least
+  one Sigma rule keyed on suspicious *behavior/argument patterns* for a
+  legitimate tool, not just a hash) and Stage 12.3 (a YARA rule can't
+  catch an attack that never touches disk as a distinct file).
+
+## Kernel-Space TOCTOU / Privilege Escalation
+
+- The Race Conditions entry above generalizes to kernel space with much
+  higher stakes: a TOCTOU race in a syscall's argument handling can let
+  unprivileged user-space code trick the kernel into operating on
+  different memory/state than what was validated, leading to privilege
+  escalation. **Dirty COW** (CVE-2016-5195) is the canonical real-world
+  example — a race condition in the Linux kernel's copy-on-write memory
+  handling that any local user could exploit for root, remaining
+  unpatched in the wild for years. *Where:* directly relevant to Stage
+  8.3 (argument validation in your own added syscalls is exactly the
+  discipline this bug class violates) and Stage 24.4 (the same caution
+  applies to any kernel module accepting input from user space).
+
 ## Resource Cleanup on Every Code Path
 
 - A tool that leaves the system in a bad state after a crash or
