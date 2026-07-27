@@ -22,6 +22,13 @@ direct rehearsal for Stage 23's deeper AI×security integration.
 
 **Topics:** attention, tokenizers, embeddings, fine-tuning, RAG, agents.
 
+**Worth knowing before building any of these:** every project below
+feeds untrusted, attacker-influenceable content (samples, logs, CVE
+text) into an LLM prompt — that content can itself be crafted to hijack
+the model's behavior (indirect prompt injection). See
+`SECURITY-CONCEPTS.md`'s "Prompt Injection" entry before you build the
+first one; it changes how you should think about trusting model output.
+
 ## Projects
 
 | # | Project | Folder |

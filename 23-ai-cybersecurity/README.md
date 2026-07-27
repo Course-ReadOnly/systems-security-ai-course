@@ -29,3 +29,8 @@ Seven projects is a lot — treat this as a menu to draw from rather than
 a strict must-do-all-seven list, similar to Stage 1's easy/medium/hard
 framing. Pick the ones that connect to what interests you most; each
 one stands alone.
+
+**Same prompt-injection caution as Stage 22 applies here, more sharply**
+— these tools sit even closer to real security decisions (triage
+verdicts, IOC extraction, fuzzing guidance). See
+`SECURITY-CONCEPTS.md`'s "Prompt Injection" entry.

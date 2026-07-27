@@ -22,6 +22,11 @@ possible to write.
    objdump, no running the binary) and at least one via **dynamic**
    analysis (gdb, actually stepping through execution) — both skills are
    required, not just whichever's more comfortable.
+4. If any crackme includes anti-debugging tricks (timing checks,
+   `ptrace`-based self-detection, etc. — check
+   `SECURITY-CONCEPTS.md`'s "Anti-Analysis" entry if one trips you up),
+   document how you identified and worked around it — that's often the
+   actual interesting part of the write-up, not the final flag.
 
 ## Acceptance criteria
 
