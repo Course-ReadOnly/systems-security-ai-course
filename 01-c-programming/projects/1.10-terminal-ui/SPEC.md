@@ -32,6 +32,15 @@ the point of this stage).
 - [ ] `valgrind` clean
 - [ ] `git log` shows iteration
 
+## Security relevance
+
+Same escape-sequence caution as 1.9, plus a resource-cleanup angle: a
+TUI tool that doesn't restore terminal state reliably on every exit path
+(including signals) is the same category of bug as a security tool
+(think Stage 9's port scanner or Stage 13's fuzzer) that leaves a system
+in a bad state after a crash — cleanup-on-every-path is a habit, not a
+one-off fix.
+
 ## When done
 
 Point me at the source + `git log` plus your session transcript. I'll

@@ -41,6 +41,15 @@ abstraction and becomes an explicit free-list/bookkeeping problem you own.
 - [ ] README explaining your free-list design and the splitting/
       coalescing strategy
 
+## Security relevance
+
+This is the single most direct prerequisite in the whole roadmap for
+Stage 13's binary exploitation: heap overflows, use-after-free, and
+double-free are all bugs in an allocator's bookkeeping (the free-list
+metadata you're building right here). Understanding how your own
+allocator's internal state can be corrupted is what makes heap
+exploitation techniques legible later, instead of feeling like magic.
+
 ## When done
 
 Point me at the source + `git log`. I'll check the free-list bookkeeping

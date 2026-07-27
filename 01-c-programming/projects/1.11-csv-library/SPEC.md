@@ -36,6 +36,14 @@ prep for how every project from Stage 2 onward is organized.
 - [ ] `valgrind` clean
 - [ ] `git log` shows iteration
 
+## Security relevance
+
+"CSV injection" (a cell value like `=CMD(...)` that a spreadsheet
+program later executes as a formula) is a real, named vulnerability
+class with actual CVEs — worth knowing your library never assumes a
+field's content is "just data" once it leaves your program and gets
+opened by something else downstream.
+
 ## When done
 
 Point me at the source + `git log`. I'll check the header/implementation

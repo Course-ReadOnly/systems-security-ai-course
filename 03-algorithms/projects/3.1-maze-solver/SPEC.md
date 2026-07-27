@@ -37,6 +37,16 @@ version.
 - [ ] `valgrind` clean (if C)
 - [ ] `git log` shows iteration
 
+## Security relevance
+
+"Algorithmic complexity attack" is the formal name for what happens when
+an attacker can hand your program input specifically shaped to hit its
+worst-case behavior — a maze/graph with a crafted structure making BFS/
+DFS pathologically slow is the same category of bug as ReDoS (regex
+denial-of-service) or hash-flooding attacks against naive hash tables.
+Knowing your algorithm's real worst case, not just its average case,
+matters the moment input is untrusted.
+
 ## When done
 
 Point me at the source + `git log`. I'll check that BFS is actually

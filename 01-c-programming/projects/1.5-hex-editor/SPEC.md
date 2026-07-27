@@ -34,6 +34,14 @@ raw bytes is a daily activity.
 - [ ] `valgrind` clean
 - [ ] `git log` shows iteration
 
+## Security relevance
+
+This isn't a metaphor for later work — it's literally the same operation
+as Stage 11.4's binary patcher, just without the "figure out which byte
+matters" step that project adds. Being fluent at reading and safely
+editing raw bytes now removes one whole layer of friction from RE work
+later.
+
 ## When done
 
 Point me at the source + `git log`. I'll check the edit path specifically

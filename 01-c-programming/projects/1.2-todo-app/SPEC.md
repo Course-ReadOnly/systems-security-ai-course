@@ -30,6 +30,15 @@ computation like the calculator.
 - [ ] `valgrind` run pasted, no leaks
 - [ ] `git log` shows iteration
 
+## Security relevance
+
+Any time a program trusts a file it reads back as well-formed (this
+one's own save file), ask what happens if that file's contents were
+tampered with or corrupted instead. That question — "what if this input
+isn't what I expect" — is the entire premise behind Stage 5.5's path-
+traversal defense and Stage 13's exploitation work; it starts as a habit
+here, with low stakes.
+
 ## When done
 
 Point me at the source + `git log`. I'll check the file I/O error

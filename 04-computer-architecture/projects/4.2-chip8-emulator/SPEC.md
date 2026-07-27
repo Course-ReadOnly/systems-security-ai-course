@@ -36,6 +36,14 @@ enough to finish, real enough to run actual games. Builds directly on
 - [ ] README noting which opcodes are implemented (all ~35, or a
       documented subset)
 
+## Security relevance
+
+An emulator that faithfully executes untrusted "programs" (ROMs here)
+is a miniature version of the trust boundary Stage 12's malware sandbox
+depends on — the interesting security question for any emulator is
+always "can guest code do anything the host didn't intend to allow,"
+even if this project's ROMs are harmless games.
+
 ## When done
 
 Point me at the source + `git log` plus your test evidence. I'll check

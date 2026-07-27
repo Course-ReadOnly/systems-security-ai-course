@@ -38,6 +38,15 @@ program loop reacting to keypresses in real time.
 - [ ] `valgrind` clean
 - [ ] `git log` shows iteration
 
+## Security relevance
+
+Terminal emulators process escape sequences embedded in whatever content
+they display — malicious files crafted to inject escape sequences into
+a victim's terminal (moving the cursor, hiding text, even injecting fake
+commands) are a real, if niche, vulnerability class. It's worth knowing
+that displaying untrusted file content isn't automatically safe just
+because it's "only text."
+
 ## When done
 
 Point me at the source + `git log` plus your session transcript. I'll

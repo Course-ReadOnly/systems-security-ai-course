@@ -38,6 +38,16 @@ not real-world map data).
 - [ ] `valgrind` clean (if C)
 - [ ] `git log` shows iteration
 
+## Security relevance
+
+Same complexity-attack concern as 3.1, plus a new one: Dijkstra's
+correctness depends on non-negative edge weights — if this were ever
+fed attacker-controlled weights, that assumption becoming false is
+exactly the kind of subtle precondition violation that breaks security-
+critical algorithms in production (cache-poisoning and routing-protocol
+attacks are real-world instances of "the algorithm's assumptions no
+longer hold, and nobody checked").
+
 ## When done
 
 Point me at the source + `git log`. I'll check the priority-queue choice

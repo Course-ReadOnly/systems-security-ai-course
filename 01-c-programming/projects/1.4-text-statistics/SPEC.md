@@ -30,6 +30,14 @@ the standard Unix tool convention.
 - [ ] `valgrind` clean
 - [ ] `git log` shows iteration
 
+## Security relevance
+
+A tool that reads arbitrary text and reasons about its structure (lines,
+words, lengths) is a small preview of Stage 14's log parser — and the
+same edge cases that break a naive implementation here (empty input, no
+trailing newline, unexpected whitespace) are exactly what a malformed or
+deliberately evasive log line looks like to a detection pipeline later.
+
 ## When done
 
 Point me at the source + `git log`. I'll check the word-counting logic

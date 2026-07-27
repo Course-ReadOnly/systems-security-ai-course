@@ -38,6 +38,15 @@ handling stop being lecture concepts and become things you debug at 2am.
 - [ ] `valgrind` clean
 - [ ] `git log` shows iteration
 
+## Security relevance
+
+Command injection — untrusted input reaching something that parses it
+as a shell command — is one of the most common and most severe web
+vulnerability classes (a fixture of PortSwigger's Stage 13 labs). Writing
+your own shell, and seeing exactly how a string becomes an executed
+process, makes it concrete why "never build a command string by
+concatenating untrusted input" is a rule and not just folklore.
+
 ## When done
 
 Point me at the source + `git log` plus a session transcript. I'll check

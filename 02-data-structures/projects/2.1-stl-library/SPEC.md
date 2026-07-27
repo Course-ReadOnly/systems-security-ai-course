@@ -56,6 +56,16 @@ Pick any of these if the core is solid and you want more:
       addressing, why this hash function, etc.) in your own words
 - [ ] Any stretch structures attempted, same rigor as core
 
+## Security relevance
+
+Use-after-free and double-free are two of the most exploited bug
+classes in real software, and they live exactly in the code you're
+writing here — a data structure that frees a node and leaves a dangling
+pointer reachable is the textbook setup. The ownership discipline this
+project forces (who allocates, who frees, exactly once) is the actual
+skill; Stage 5.2's `malloc` project and Stage 13's exploitation work
+both assume it's already solid.
+
 ## When done
 
 Point me at the source + `git log`. Say "review my code" — I'll check

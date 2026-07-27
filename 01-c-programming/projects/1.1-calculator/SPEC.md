@@ -32,6 +32,14 @@ the result — the smallest project that still forces you through
       showing no memory errors/leaks
 - [ ] `git log` shows iteration
 
+## Security relevance
+
+Unchecked arithmetic (integer overflow, division edge cases) is a real,
+named vulnerability class, not just a correctness nitpick — the same
+"did I actually validate this input before computing with it" discipline
+you build here is what Stage 13's buffer-overflow work is really testing
+for, just applied to memory offsets instead of numbers.
+
 ## When done
 
 Point me at the source + `git log`. "Review my code" for a real review —

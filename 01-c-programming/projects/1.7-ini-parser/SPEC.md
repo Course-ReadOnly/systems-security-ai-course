@@ -34,6 +34,15 @@ data-structure complexity before Stage 2 formalizes this.
 - [ ] `valgrind` clean
 - [ ] `git log` shows iteration
 
+## Security relevance
+
+Same theme as 1.6, one layer deeper: a scoping bug here (a key
+"leaking" between sections) is structurally the same mistake as an
+access-control bug that lets data meant for one context bleed into
+another — a pattern that recurs seriously in Stage 13's web-exploitation
+labs (access control is one of PortSwigger's core vulnerability
+categories).
+
 ## When done
 
 Point me at the source + `git log`. I'll check that section-scoping is

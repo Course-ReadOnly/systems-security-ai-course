@@ -37,6 +37,16 @@ for Stage 2's tree-shaped data structures.
       common bug in parsers like this
 - [ ] `git log` shows iteration
 
+## Security relevance
+
+Recursive-descent parsers have a real, recurring CVE history: deeply
+nested input causing stack-overflow crashes (a denial-of-service, and
+sometimes worse) is a documented bug class across production JSON/XML
+parsers, not a hypothetical. Consider (as a stretch, not required) what
+your parser does with input nested a few thousand levels deep — that
+experiment is exactly what Stage 13.2's fuzzer would eventually try
+against it automatically.
+
 ## When done
 
 Point me at the source + `git log`. I'll check the malformed-input error

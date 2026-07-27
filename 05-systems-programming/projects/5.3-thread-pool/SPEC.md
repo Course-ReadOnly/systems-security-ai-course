@@ -42,6 +42,16 @@ textbook warnings and start being things you actually have to debug.
       leaked tasks
 - [ ] `git log` shows iteration
 
+## Security relevance
+
+Race conditions aren't just a performance/correctness concern — a
+TOCTOU (time-of-check-to-time-of-use) race, where a security check and
+the action it guards happen far enough apart for state to change in
+between, is a real and recurring vulnerability class. The discipline of
+reasoning precisely about what can interleave with what, forced on you
+by this project's mutexes/condition variables, is the same reasoning
+TOCTOU bugs violate.
+
 ## When done
 
 Point me at the source + `git log` plus the ThreadSanitizer/helgrind

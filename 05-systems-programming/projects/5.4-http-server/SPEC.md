@@ -41,6 +41,15 @@ useful thing to have built once.
 - [ ] `git log` shows iteration
 - [ ] README documenting the concurrency model chosen and why
 
+## Security relevance
+
+Every web vulnerability in Stage 13's PortSwigger labs starts with an
+HTTP request reaching server code that trusts it more than it should.
+Having parsed real requests yourself — headers, methods, malformed
+input — makes it obvious later exactly where a request smuggling bug or
+a header-injection vulnerability actually lives in the parsing logic,
+rather than being an opaque "the attacker did something to the request."
+
 ## When done
 
 Point me at the source + `git log`. I'll check the HTTP parsing against

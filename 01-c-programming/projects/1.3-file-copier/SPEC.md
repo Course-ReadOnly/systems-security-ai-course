@@ -35,6 +35,15 @@ already exists) — not just calling a library function that does it for you.
 - [ ] `valgrind` clean
 - [ ] `git log` shows iteration
 
+## Security relevance
+
+A fixed-size buffer plus a read/write loop is exactly the shape of code
+where classic buffer overflows live — get the bounds arithmetic wrong
+here (an off-by-one on buffer size, trusting a read count without
+checking it) and you've written the same bug ROP Emporium's Stage 13
+challenges exist to exploit. Getting this loop provably correct now is
+direct rehearsal for spotting it broken later.
+
 ## When done
 
 Point me at the source + `git log`. I'll check the buffer loop handles

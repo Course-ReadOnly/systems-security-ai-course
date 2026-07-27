@@ -38,6 +38,16 @@ compiler-adjacent tool — direct prep for Stage 24's compiler project.
       with line number
 - [ ] `git log` shows iteration
 
+## Security relevance
+
+An assembler turning mnemonics into raw bytes is the same operation
+(in reverse) as a disassembler turning bytes back into mnemonics —
+Stage 11's entire premise. Understanding encoding from the authoring
+side makes it much easier to spot when a disassembler's output doesn't
+add up later (a real anti-analysis technique: crafting bytes that
+disassemble misleadingly, exploiting exactly the ambiguity you'll have
+resolved cleanly here on your own simple ISA).
+
 ## When done
 
 Point me at the source + `git log` and the round-trip evidence. I'll

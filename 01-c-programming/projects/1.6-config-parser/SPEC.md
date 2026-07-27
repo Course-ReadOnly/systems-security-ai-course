@@ -34,6 +34,15 @@ manage its memory explicitly — direct prep for Stage 2.
       of whether your free logic is correct, not just present)
 - [ ] `git log` shows iteration
 
+## Security relevance
+
+Any parser is an attack surface the moment its input can come from
+somewhere untrusted — "parser confusion" (a parser disagreeing with
+whatever *reads its output later* about what a malformed line means) is
+a real, named bug class. Stage 13.2's fuzzer will eventually try to
+break exactly this kind of code; writing it carefully now is the
+counterpart to breaking it later.
+
 ## When done
 
 Point me at the source + `git log`. Memory ownership is what I'll check
