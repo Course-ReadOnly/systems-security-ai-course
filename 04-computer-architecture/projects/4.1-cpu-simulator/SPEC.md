@@ -42,7 +42,7 @@ build on.
 ## Security relevance
 
 Every sandbox/VM/emulator-based security tool (Stage 12's malware
-sandboxing, Stage 24's hypervisor work) is built on exactly this
+sandboxing, Stage 26's hypervisor work) is built on exactly this
 fetch-decode-execute loop, with the added job of also containing
 whatever's running inside it. Building one yourself, even a toy one,
 makes "sandbox escape" a concrete idea later instead of an abstract

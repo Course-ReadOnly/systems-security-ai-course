@@ -16,7 +16,7 @@ built on top of — gaps here compound later.
 | # | Topic | Free Resource |
 |---|---|---|
 | 01 | Full language (variables → pointers → memory) | [Beej's Guide to C](https://beej.us/guide/bgc/) |
-| 02 | Deeper / modern semantics | [Modern C by Jens Gustedt](https://hal.inria.fr/hal-02383654/document) |
+| 02 | Deeper / modern semantics | [Modern C by Jens Gustedt](https://upload.wikimedia.org/wikipedia/commons/0/0a/Modern_C.pdf) |
 | 03 | Structured course w/ problem sets | [CS50 (Harvard)](https://cs50.harvard.edu/x/) |
 | 04 | Interactive drills | [learn-c.org](https://www.learn-c.org/) |
 | 05 | Reference | [C Reference (cppreference.com)](https://en.cppreference.com/w/c) |
@@ -44,9 +44,10 @@ checklist.
 | 1.10 | Terminal UI | Hard | `projects/1.10-terminal-ui/` |
 | 1.11 | CSV library | Hard | `projects/1.11-csv-library/` |
 
-Folders aren't scaffolded yet and no `SPEC.md` exists for any of these —
-per the course's default pacing, those get created when this stage is
-actually reached, not now. This file is a stage-level outline only.
+> **Generated ahead of schedule** (2026-07-27, per learner request). All 11
+> `SPEC.md` files above exist and are fully written — revisit when this
+> stage is actually reached, per this course's usual generated-ahead
+> caveat.
 
 ## Note on environment
 

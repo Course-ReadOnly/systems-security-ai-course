@@ -11,6 +11,13 @@ style JSON, or simpler CSV feeds) rather than just raw strings out of a
 binary. The shift here is from "extract indicators from one sample" to
 "normalize indicators from many different external sources."
 
+Sample inputs are provided at `samples/stix-bundle.json` (a simplified
+STIX 2.1-shaped bundle) and `samples/feed.csv` (a plain CSV feed) — one
+IP indicator deliberately appears in both, formatted differently (plain
+vs. `/32` CIDR), specifically to exercise the normalize-before-dedup
+requirement below. All values are synthetic (RFC 5737 documentation IP
+ranges, `.test` domains) — not real infrastructure or malware.
+
 ## Requirements
 
 1. Parses IOCs from at least two different structured input formats

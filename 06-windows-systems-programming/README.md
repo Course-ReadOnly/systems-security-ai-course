@@ -10,7 +10,7 @@
 Everything through Stage 5 is Linux/POSIX. This is the Windows
 equivalent — same process/thread/IPC concepts, but the actual Win32 API
 you'll need to read when reversing Windows binaries or analyzing Windows
-malware later (Stages 12, 24). This stage was inserted specifically to
+malware later (Stages 12, 26). This stage was inserted specifically to
 give Windows internals dedicated coverage rather than leaving it as a
 bare mention elsewhere.
 

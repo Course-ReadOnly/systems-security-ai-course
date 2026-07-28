@@ -1,0 +1,23 @@
+{
+  "name": "sample-project",
+  "version": 2,
+  "active": true,
+  "deprecated": false,
+  "owner": null,
+  "tags": ["parser", "recursive-descent", "c"],
+  "metrics": {
+    "lines_of_code": 842,
+    "coverage": 87.5,
+    "contributors": ["alice", "bob"]
+  },
+  "nested": {
+    "level1": {
+      "level2": {
+        "level3": ["deep", "nesting", "check", 1, 2, 3]
+      }
+    }
+  },
+  "mixed_array": [1, "two", true, null, {"key": "value"}, [1, 2, 3]],
+  "empty_object": {},
+  "empty_array": []
+}

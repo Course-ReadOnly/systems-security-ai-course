@@ -1,0 +1,5 @@
+type,value,source
+ipv4,203.0.113.5/32,csv-feed-vendor-a
+domain,malicious-example.test,csv-feed-vendor-a
+sha256,ffffffff55555555eeeeeeee66666666dddddddd77777777cccccccc88888888,csv-feed-vendor-a
+ipv4,192.0.2.99,csv-feed-vendor-a

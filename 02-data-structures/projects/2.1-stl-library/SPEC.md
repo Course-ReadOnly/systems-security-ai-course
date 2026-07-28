@@ -43,8 +43,9 @@ Pick any of these if the core is solid and you want more:
 
 ## Acceptance criteria
 
-- [ ] All five core structures implemented, each with a small test/demo
-      showing correct behavior (paste output)
+- [ ] All six core structures implemented — vector, linked list, stack,
+      queue, hash map, BST — each with a small test/demo showing correct
+      behavior (paste output)
 - [ ] `valgrind` clean across every structure's test — paste output
 - [ ] Memory ownership documented (in code comments or README) — who
       frees what

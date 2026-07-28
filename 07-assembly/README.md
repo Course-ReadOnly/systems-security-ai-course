@@ -17,7 +17,7 @@ disassembler's output if you can't read assembly.
 
 | # | Topic | Free Resource |
 |---|---|---|
-| 01 | x86/x64/ARM64, full training | [OpenSecurityTraining2](https://opensecuritytraining.info/) |
+| 01 | x86/x64/ARM64, full training | [OpenSecurityTraining2](https://p.ost2.fyi/courses) |
 | 02 | x86-64 assembly reference | [NASM Tutorial](https://cs.lmu.edu/~ray/notes/nasmtutorial/) |
 | 03 | ARM64 | [ARM Developer docs](https://developer.arm.com/documentation) |
 

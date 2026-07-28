@@ -10,6 +10,12 @@ useful subset of JSON. This is the first project with genuine recursive
 structure (objects/arrays can nest arbitrarily) and is direct rehearsal
 for Stage 2's tree-shaped data structures.
 
+Sample inputs are provided at `samples/valid.json` (nested
+objects/arrays, all value types, empty object/array) and
+`samples/invalid.json` (unclosed array, trailing commas — for the
+error-path requirement below) — use them to get started, but write
+your own edge-case files too as you find gaps.
+
 ## Requirements
 
 1. Parses: objects `{}`, arrays `[]`, strings, numbers, booleans

@@ -10,6 +10,10 @@ you can query by key. This is the first project requiring you to design
 your own data structure (an array or linked list of key/value pairs) and
 manage its memory explicitly — direct prep for Stage 2.
 
+A sample input file is provided at `samples/app.conf` (comments, blank
+lines, and inconsistent `=` spacing already included) — use it to get
+started, but write your own edge-case files too as you find gaps.
+
 ## Requirements
 
 1. Parses a file of lines like `key=value`, one per line.

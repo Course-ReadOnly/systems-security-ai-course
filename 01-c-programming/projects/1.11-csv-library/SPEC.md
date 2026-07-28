@@ -12,6 +12,11 @@ small CLI demo on top proving it works. Direct rehearsal for structuring
 C code across multiple files with a real header/implementation split —
 prep for how every project from Stage 2 onward is organized.
 
+A sample input file is provided at `samples/example.csv` (quoted
+fields with embedded commas/newlines/escaped quotes, and an empty
+field already included) — use it to get started, but write your own
+edge-case files too as you find gaps.
+
 ## Requirements
 
 1. Split into a library (`csv.h`/`csv.c`) and a separate demo CLI

@@ -9,7 +9,7 @@ Write an assembler targeting **your own 4.1 CPU simulator's instruction
 set** — turning human-readable mnemonics (`ADD R1, R2`) into the raw
 encoding your simulator executes. This is where an ISA stops being an
 abstract idea and becomes something you can actually target as a
-compiler-adjacent tool — direct prep for Stage 24's compiler project.
+compiler-adjacent tool — direct prep for Stage 26's compiler project.
 
 ## Requirements
 

@@ -22,7 +22,7 @@ than rubber-stamped.
 01-c-programming/        Stage 1 — C
 02-data-structures/      Stage 2
 ...
-25-portfolio/            Stage 25 — final portfolio curation
+27-portfolio/            Stage 27 — final portfolio curation
 ```
 
 Each stage folder has its own `README.md` (objectives, resources,

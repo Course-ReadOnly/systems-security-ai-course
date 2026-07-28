@@ -1,0 +1,33 @@
+{
+  "type": "bundle",
+  "id": "bundle--0f3b1c2a-8f1e-4a9a-9c3e-example00001",
+  "objects": [
+    {
+      "type": "indicator",
+      "id": "indicator--a1000000-0000-4000-8000-000000000001",
+      "created": "2026-07-20T14:12:00Z",
+      "pattern": "[ipv4-addr:value = '203.0.113.5']",
+      "pattern_type": "stix",
+      "labels": ["malicious-activity"],
+      "name": "Known C2 IP (documentation range, synthetic)"
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--a1000000-0000-4000-8000-000000000002",
+      "created": "2026-07-21T09:03:00Z",
+      "pattern": "[domain-name:value = 'bad-example.test']",
+      "pattern_type": "stix",
+      "labels": ["malicious-activity"],
+      "name": "Phishing domain (synthetic, .test TLD)"
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--a1000000-0000-4000-8000-000000000003",
+      "created": "2026-07-22T17:45:00Z",
+      "pattern": "[file:hashes.'SHA-256' = 'aaaaaaaa11111111bbbbbbbb22222222cccccccc33333333dddddddd44444444']",
+      "pattern_type": "stix",
+      "labels": ["malicious-activity"],
+      "name": "Synthetic malware sample hash"
+    }
+  ]
+}

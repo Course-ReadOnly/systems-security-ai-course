@@ -1,0 +1,6 @@
+name,age,bio,tags
+"Doe, John",30,"Loves ""quoting"" edge cases and
+writes bios that span multiple lines","c,parsing"
+Jane Smith,25,Simple bio with no special characters,csv
+"O'Brien, Pat",41,"A trailing comma test,",edge-case
+Empty Bio,19,,none

@@ -18,7 +18,7 @@ nothing in Stage 1 onward is blocked by "how do I even run this."
 | 02 | Shell fundamentals | [MIT Missing Semester](https://missing.csail.mit.edu/) |
 | 03 | Bash scripting | [Bash Guide (Greg's Wiki)](https://mywiki.wooledge.org/BashGuide) |
 | 04 | Git | [Pro Git book](https://git-scm.com/book/en/v2) |
-| 05 | Editors (Vim/Neovim/VS Code) | [Vim Adventures free tier](https://vim-adventures.com/) + [Neovim docs](https://neovim.io/doc/) |
+| 05 | Editors (Vim/Neovim/VS Code) | [OpenVim](https://www.openvim.com/) (fully free) + [Vim Adventures](https://vim-adventures.com/) (early levels free, full game paid) + [Neovim docs](https://neovim.io/doc/) |
 | 06 | GCC/Clang, Make | [GNU Make Manual](https://www.gnu.org/software/make/manual/make.html) |
 | 07 | CMake | [CMake official tutorial](https://cmake.org/cmake/help/latest/guide/tutorial/index.html) |
 | 08 | GDB | [Beej's GDB Quick Start](https://beej.us/guide/bggdb/) |

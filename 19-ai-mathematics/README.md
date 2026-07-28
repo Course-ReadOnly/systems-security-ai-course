@@ -7,7 +7,7 @@
 
 ## Objectives
 
-The math foundation Stages 20-23 assume without re-teaching: linear
+The math foundation Stages 20-23 and 25 assume without re-teaching: linear
 algebra (what a neural network layer actually *is*, mathematically),
 probability/statistics (loss functions, evaluation metrics), and enough
 calculus to understand backpropagation as gradient descent, not magic.
@@ -29,7 +29,7 @@ optimization.
 
 Unlike every other stage, ROADMAP.md doesn't list a build project here —
 this is pure foundational math, assessed differently. When you actually
-reach this stage, the realistic way to check readiness before Stage 20
+reach this stage, the realistic way to check readiness before Stage 21
 is:
 
 1. Work a meaningful chunk of problem sets from **at least** MIT 18.06

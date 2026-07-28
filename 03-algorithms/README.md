@@ -12,7 +12,7 @@ algorithm and reason about its complexity." Sorting/searching are warmups;
 graph algorithms (BFS/DFS, Dijkstra, A*) and dynamic programming are the
 real content, and both come back constantly — Dijkstra/A* directly in the
 route-planner project here, graph traversal again in Stage 11 (binary
-control-flow graphs) and Stage 24 (compilers).
+control-flow graphs) and Stage 26 (compilers).
 
 ## Topics & resources
 

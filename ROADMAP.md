@@ -5,7 +5,7 @@ and AI/LLMs. Every resource listed is free (open courseware, open-source
 books, free YouTube series, or free-tier interactive platforms). Time
 estimates assume **~10–15 hrs/week** (part-time, working/studying alongside).
 A **full-time (~35–40 hrs/week)** estimate is given alongside where useful.
-Total path: roughly **3–3.5 years part-time**, or **~13–17 months
+Total path: roughly **3.75–4 years part-time**, or **~14–18 months
 full-time**, if done end-to-end — but you can stop anywhere and already have
 a real skillset.
 
@@ -33,7 +33,7 @@ a real skillset.
 | Shell fundamentals | [MIT Missing Semester](https://missing.csail.mit.edu/) — free, full video+notes |
 | Bash scripting | [Bash Guide (Greg's Wiki)](https://mywiki.wooledge.org/BashGuide) |
 | Git | [Pro Git book](https://git-scm.com/book/en/v2) — free, official |
-| Editors (Vim/Neovim/VS Code) | [Vim Adventures free tier](https://vim-adventures.com/) + [Neovim docs](https://neovim.io/doc/) |
+| Editors (Vim/Neovim/VS Code) | [OpenVim](https://www.openvim.com/) (fully free) + [Vim Adventures](https://vim-adventures.com/) (early levels free, full game paid) + [Neovim docs](https://neovim.io/doc/) |
 | GCC/Clang, Make | [GNU Make Manual](https://www.gnu.org/software/make/manual/make.html) |
 | CMake | [CMake official tutorial](https://cmake.org/cmake/help/latest/guide/tutorial/index.html) |
 | GDB | [Beej's GDB Quick Start](https://beej.us/guide/bggdb/) |
@@ -56,7 +56,7 @@ capstone tying all of the above together (added 2026-07-26, see
 | Topic | Free Resource |
 |---|---|
 | Full language (variables → pointers → memory) | [Beej's Guide to C](https://beej.us/guide/bgc/) — free, excellent |
-| Deeper / modern semantics | [Modern C by Jens Gustedt](https://hal.inria.fr/hal-02383654/document) — free PDF |
+| Deeper / modern semantics | [Modern C by Jens Gustedt](https://upload.wikimedia.org/wikipedia/commons/0/0a/Modern_C.pdf) — free PDF (Wikimedia Commons mirror; the hal.inria.fr original is bot-protection-blocked for automated fetches) |
 | Structured course w/ problem sets | [CS50 (Harvard, free via edX/YouTube)](https://cs50.harvard.edu/x/) |
 | Interactive drills | [learn-c.org](https://www.learn-c.org/) |
 | Reference | [C Reference (cppreference.com)](https://en.cppreference.com/w/c) |
@@ -146,7 +146,7 @@ server, a static web server.
 Everything through Stage 5 is Linux/POSIX. This stage is the Windows
 equivalent — the same process/thread/IPC concepts, but the actual API you'll
 need to read when reversing Windows binaries or analyzing Windows malware
-later in the course (Stages 12, 24).
+later in the course (Stages 12, 26).
 
 | Topic | Free Resource |
 |---|---|
@@ -176,7 +176,7 @@ of tooling you'll build again, more seriously, in Stage 12).
 
 | Topic | Free Resource |
 |---|---|
-| x86/x64/ARM64, full training | [OpenSecurityTraining2 — free courses](https://opensecuritytraining.info/) |
+| x86/x64/ARM64, full training | [OpenSecurityTraining2 — free courses](https://p.ost2.fyi/courses) |
 | x86-64 assembly reference | [NASM Tutorial (free)](https://cs.lmu.edu/~ray/notes/nasmtutorial/) |
 | ARM64 | [ARM Developer — free documentation](https://developer.arm.com/documentation) |
 
@@ -240,7 +240,7 @@ context switching.
 
 | Topic | Free Resource |
 |---|---|
-| Structured RE training | [OpenSecurityTraining2](https://opensecuritytraining.info/) |
+| Structured RE training | [OpenSecurityTraining2](https://p.ost2.fyi/courses) |
 | Beginner-friendly RE course | [MalwareTech / Malware Unicorn RE101 & RE102 (free)](https://malwareunicorn.org/#/workshops) |
 | Tools | [Ghidra (free, NSA open-source)](https://ghidra-sre.org/) · [Radare2 (free/open-source)](https://rada.re/n/) |
 | Practice binaries | [crackmes.one](https://crackmes.one/) — free |
@@ -298,7 +298,7 @@ strings.
 | Detection rule format | [Sigma project (open-source)](https://github.com/SigmaHQ/sigma) |
 | Signature engine | [YARA docs](https://yara.readthedocs.io/) |
 | Network monitoring | [Zeek docs (open-source)](https://docs.zeek.org/) · [Suricata docs (open-source)](https://docs.suricata.io/) |
-| SIEM / threat hunting practice | [LetsDefend free tier](https://letsdefend.io/) |
+| SIEM / threat hunting practice | [LetsDefend](https://letsdefend.io/) (free tier: foundational courses only, hands-on SOC labs are paid) |
 
 **Projects:** write detection rules, run threat-hunting exercises against
 sample logs, build a log parser.
@@ -381,7 +381,37 @@ scripting, threat-intel collector.
 
 ---
 
-## Stage 20 — Machine Learning
+## Stage 20 — Neural Networks Foundations
+
+**Time: 4–6 weeks part-time / 2 weeks full-time**
+
+> **Added 2026-07-28**, per learner request for more in-depth neural-network
+> coverage before applied ML/DL. Stage 19's math becomes a working, from-
+> scratch understanding of how a neural net actually learns — before Stage
+> 21 hands you a framework that does it for you. This is deliberately
+> narrower than Stage 21/22: one mechanism, understood cold, not a survey.
+
+| Topic | Free Resource |
+|---|---|
+| From-scratch build, autograd + backprop, code-first | [Andrej Karpathy — "Neural Networks: Zero to Hero" (free YouTube series)](https://karpathy.ai/zero-to-hero.html) |
+| Free full textbook, rigorous but accessible | [Neural Networks and Deep Learning — Michael Nielsen (free online book)](http://neuralnetworksanddeeplearning.com/) |
+| Visual intuition for gradient descent/backprop | [3Blue1Brown — Neural Networks series (free YouTube)](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) |
+| Pure-NumPy walkthrough, layer by layer | [Sentdex — "Neural Networks from Scratch in Python" (free YouTube series)](https://www.youtube.com/watch?v=Wo5dMEP_BbI) |
+
+**Topics:** the perceptron, activation functions, forward pass, loss
+functions, backpropagation derived by hand, gradient descent, a
+minimal autograd engine, a multi-layer perceptron trained without any
+ML framework.
+
+**Projects:** a single neuron/perceptron from scratch (no libraries), a
+micrograd-style autograd engine (build the backprop engine itself,
+following Karpathy), a multi-layer perceptron trained on MNIST digits
+using only NumPy, a stretch port of the same MLP to C (ties back to
+Stage 1).
+
+---
+
+## Stage 21 — Machine Learning
 
 **Time: 6–8 weeks part-time / 3 weeks full-time**
 
@@ -397,7 +427,7 @@ scripting, threat-intel collector.
 
 ---
 
-## Stage 21 — Deep Learning
+## Stage 22 — Deep Learning
 
 **Time: 6–8 weeks part-time / 3 weeks full-time**
 
@@ -413,7 +443,7 @@ scripting, threat-intel collector.
 
 ---
 
-## Stage 22 — LLMs
+## Stage 23 — LLMs
 
 **Time: 6–8 weeks part-time / 3 weeks full-time**
 
@@ -430,11 +460,57 @@ threat-hunting assistant, vulnerability assistant.
 
 ---
 
-## Stage 23 — AI × Cybersecurity
+## Stage 24 — Blockchain & Smart Contracts
 
 **Time: 6–8 weeks part-time / 3 weeks full-time**
 
-Draws on Stages 6, 11–14, 20–22 together. No single course covers this —
+> **Added 2026-07-28**, per learner request. Placed here rather than near
+> Stage 10 (classical Cryptography) because it leans on tooling you don't
+> have yet — Python/Go (17–18) for building a chain from scratch, and the
+> auditing/exploit mindset from Stage 13 (Offensive Security) for the
+> smart-contract security half. All resources below are free and are the
+> ones the field itself treats as credible/canonical (official docs,
+> audited-org-run wargames, not survey-course filler) — verified live as of
+> 2026-07-28, revisit for staleness whenever this stage is actually reached.
+
+| Topic | Free Resource |
+|---|---|
+| Blockchain fundamentals (hashing, consensus, UTXO) | [Mastering Bitcoin — Andreas Antonopoulos (free, open-source book)](https://github.com/bitcoinbook/bitcoinbook) |
+| Solidity + smart contract development, full free curriculum | [Cyfrin Updraft (free, industry-run — Solidity/web3 courses)](https://updraft.cyfrin.io/) |
+| Gamified Solidity intro | [CryptoZombies (free, interactive)](https://cryptozombies.io/) |
+| Official language reference | [Solidity official docs](https://docs.soliditylang.org/) |
+| Official protocol/dev docs | [ethereum.org developer docs (free, official)](https://ethereum.org/en/developers/docs/) |
+| Smart contract security wargame | [Ethernaut (free, built by OpenZeppelin)](https://ethernaut.openzeppelin.com/) |
+| DeFi-specific exploitation challenges (advanced) | [Damn Vulnerable DeFi (free)](https://www.damnvulnerabledefi.xyz/) |
+
+**Topics:** blocks, hashing, Merkle trees, consensus (PoW/PoS), the
+Ethereum account/gas model, Solidity, the ERC-20/ERC-721 token
+standards, common smart contract vulnerability classes (reentrancy,
+integer overflow, access control, oracle manipulation, flash-loan
+attacks), auditing methodology.
+
+**Projects:** a minimal blockchain from scratch (blocks, hashing, proof-
+of-work, chain validation — in Python or Go, reusing Stage 17/18), a
+first Solidity smart contract plus an ERC-20 token deployed to a
+testnet, a small DApp (contract + CLI/frontend interacting via a web3
+library), a full pass through Ethernaut with a written vulnerability-
+by-vulnerability report (mirrors the crackme write-up pattern from
+Stage 11), a stretch round of Damn Vulnerable DeFi challenges for
+learners who want the offensive-security depth carried into web3.
+
+**Security relevance:** this stage is the web3 analogue of Stages 11–13 —
+same reverse-engineering/exploitation mindset, applied to a domain where
+bugs are worth real money and get exploited within minutes of deployment.
+Treat the Ethernaut/Damn Vulnerable DeFi work with the same rigor as any
+other offensive-security lab in this course.
+
+---
+
+## Stage 25 — AI × Cybersecurity
+
+**Time: 6–8 weeks part-time / 3 weeks full-time**
+
+Draws on Stages 6, 11–14, 21–23 together. No single course covers this —
 this is an integration stage where you combine Windows/RE/malware/detection
 knowledge with the ML/LLM tooling you just built.
 
@@ -444,7 +520,7 @@ an LLM), AI-powered fuzzing assistant, AI CTF assistant (for your own lab).
 
 ---
 
-## Stage 24 — Advanced Engineering
+## Stage 26 — Advanced Engineering
 
 **Time: 10–12 weeks part-time / 5 weeks full-time**
 
@@ -465,7 +541,7 @@ module, an eBPF monitor.
 
 ---
 
-## Stage 25 — Portfolio (Ongoing)
+## Stage 27 — Portfolio (Ongoing)
 
 Target **25–30 substantial projects** by the end. A balanced spread:
 
@@ -480,8 +556,11 @@ custom fuzzer, malware triage tool, YARA rule pack, Sigma rule pack.
 
 **Hardware:** CHIP-8 emulator, bootloader, embedded firmware, CPU simulator.
 
-**AI:** malware classifier, AI log analyzer, AI reverse-engineering
-assistant, AI threat-hunting assistant.
+**AI:** autograd engine/MLP from scratch, malware classifier, AI log
+analyzer, AI reverse-engineering assistant, AI threat-hunting assistant.
+
+**Blockchain:** blockchain-from-scratch, ERC-20 token + DApp, Ethernaut
+write-up.
 
 Put all of it on GitHub with real READMEs — this portfolio *is* the resume
 for systems/security/AI roles.
@@ -493,16 +572,16 @@ for systems/security/AI roles.
 | Phase | Stages | Duration | Running Total |
 |---|---|---|---|
 | Foundations & C | 0–3 | ~5–6 months | 6 months |
-| Systems Depth (incl. Windows) | 4–8 | ~8–9 months | ~15 months |
+| Systems Depth (incl. Windows) | 4–6, 8 | ~8–9 months | ~15 months |
 | Networking, Crypto, Assembly | 7, 9–10 | ~4 months | ~19 months |
 | Security Track | 11–14 | ~7 months | ~26 months |
 | Embedded/Hardware (optional branch) | 15–16 | ~2 months | ~28 months |
 | Scripting Languages | 17–18 | ~2 months | ~30 months |
-| AI Foundations | 19–21 | ~5.5 months | ~35.5 months |
-| LLMs & AI×Security | 22–23 | ~3.5 months | ~39 months |
-| Advanced Engineering | 24 | ~3 months | ~42 months |
-| Portfolio polish | 25 | ongoing | — |
+| AI Foundations (incl. Neural Networks) | 19–22 | ~7 months | ~37 months |
+| LLMs, Blockchain & AI×Security | 23–25 | ~5.5 months | ~42.5 months |
+| Advanced Engineering | 26 | ~3 months | ~45.5 months |
+| Portfolio polish | 27 | ongoing | — |
 
-**~3–3.5 years part-time**, or roughly **13–17 months if done full-time**.
+**~3.75–4 years part-time**, or roughly **14–18 months if done full-time**.
 Stages 15–16 (embedded/hardware) are optional if your goal is purely
 software/AI/security — cutting them saves ~2 months.

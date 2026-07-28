@@ -10,6 +10,14 @@ normalizes messy real-world logs (varying formats, timestamps,
 encodings) into a consistent structure, queryable across log lines
 instead of read one at a time.
 
+Sample inputs are provided at `samples/access.log` (Apache/nginx
+Combined Log Format, including a brute-force login pattern and a
+SQLi-shaped query string — useful for the querying/filtering
+requirement below) and `samples/access-corrupted.log` (the same log
+with a few lines truncated/garbled — for the malformed-line
+requirement) — a real public sample is still worth sourcing too if you
+want more scale/variety.
+
 ## Requirements
 
 1. Parses at least one real log format (e.g. Apache/nginx access logs,

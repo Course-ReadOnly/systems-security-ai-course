@@ -10,6 +10,11 @@ keys. Forces a two-level data structure (sections, each containing its
 own key/value pairs) instead of one flat list — the natural next step in
 data-structure complexity before Stage 2 formalizes this.
 
+A sample input file is provided at `samples/example.ini` (implicit
+global section, both comment styles, and a duplicate `[server]` header
+already included) — use it to get started, but write your own
+edge-case files too as you find gaps.
+
 ## Requirements
 
 1. Parses INI-format files: `[section]` headers, `key=value` lines

@@ -19,7 +19,7 @@ techniques feeds directly into "how would a defender have caught this."
 | 02 | Detection rule format | [Sigma project](https://github.com/SigmaHQ/sigma) |
 | 03 | Signature engine | [YARA docs](https://yara.readthedocs.io/) |
 | 04 | Network monitoring | [Zeek docs](https://docs.zeek.org/) · [Suricata docs](https://docs.suricata.io/) |
-| 05 | SIEM / threat hunting practice | [LetsDefend free tier](https://letsdefend.io/) |
+| 05 | SIEM / threat hunting practice | [LetsDefend](https://letsdefend.io/) (free tier: foundational courses only, hands-on SOC labs are paid) |
 
 ## Projects
 

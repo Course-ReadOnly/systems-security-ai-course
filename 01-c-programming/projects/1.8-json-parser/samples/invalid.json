@@ -1,0 +1,8 @@
+{
+  "name": "broken-sample",
+  "version": 2,
+  "tags": ["missing-close-bracket", "trailing-comma",
+  "count": 3,
+  "note": "trailing comma below and an unclosed array above",
+  "list": [1, 2, 3,],
+}

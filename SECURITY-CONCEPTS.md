@@ -99,7 +99,7 @@ sections. Written once here rather than re-explained inline every time
   guest/contained code do anything the host or container didn't intend
   to permit?** A "sandbox escape" is exactly this question answered
   wrong. *Where:* 4.1, 4.2 (toy versions), 12 (malware sandboxing, for
-  real), 24.3 (hypervisors, at the hardware-virtualization level).
+  real), 26.3 (hypervisors, at the hardware-virtualization level).
 
 ## Side-Channel Attacks (Spectre/Meltdown class)
 
@@ -116,7 +116,7 @@ sections. Written once here rather than re-explained inline every time
   a side effect of *correct* hardware optimization. It's why "the code
   has no bugs" stopped being a sufficient security bar for CPU vendors
   after 2018. *Where:* conceptually relevant to Stage 4 (pipelines,
-  cache) and Stage 24 (kernel/hypervisor boundaries, where mitigations
+  cache) and Stage 26 (kernel/hypervisor boundaries, where mitigations
   like KPTI live) — no dedicated project in this roadmap builds a
   working Spectre PoC, but knowing this class exists is expected of
   anyone claiming real systems-security depth.
@@ -152,13 +152,19 @@ sections. Written once here rather than re-explained inline every time
   injection, since the attacker isn't the one talking to the model
   directly — they're poisoning data they know the model will later
   process) and it is a first-class concern for **every project in
-  Stages 22-23**, all of which feed external, attacker-influenceable
+  Stages 23 and 25**, all of which feed external, attacker-influenceable
   content into an LLM. Design implications: never let the model's output
   alone authorize a consequential action without validation (see each
   spec's "don't hallucinate/validate outputs" requirements — the same
   discipline covers this), and treat "the sample's strings say I'm
   benign" with the same suspicion as any other attacker-controlled
-  claim. *Where:* Stage 22 (all four projects), Stage 23 (all seven).
+  claim. *Where:* Stage 23 (all four projects), Stage 25 (all seven).
+- Smart contracts have their own version: an LLM-assisted auditing tool
+  (should one get built as a stretch project) that summarizes or
+  evaluates untrusted Solidity source is exposed to the same class of
+  attack — malicious code comments or string literals crafted to
+  influence the model's verdict. *Where:* conceptually relevant to
+  Stage 24 if any AI-assisted tooling is used there.
 
 ## DLL Hijacking / Search-Order Hijacking
 
@@ -201,7 +207,7 @@ sections. Written once here rather than re-explained inline every time
   handling that any local user could exploit for root, remaining
   unpatched in the wild for years. *Where:* directly relevant to Stage
   8.3 (argument validation in your own added syscalls is exactly the
-  discipline this bug class violates) and Stage 24.4 (the same caution
+  discipline this bug class violates) and Stage 26.4 (the same caution
   applies to any kernel module accepting input from user space).
 
 ## Resource Cleanup on Every Code Path
@@ -215,5 +221,5 @@ sections. Written once here rather than re-explained inline every time
 
 ---
 
-This list will grow as later stages (especially 11-14, 22-23) surface
+This list will grow as later stages (especially 11-14, 23-25) surface
 more specific techniques — treat it as living, not final.

@@ -7,7 +7,7 @@
 
 Automate part of Stage 11's reverse-engineering workflow using Ghidra's
 Python scripting API — the actual, professional way RE work scales
-beyond one binary at a time. This is direct prep for Stage 23's "AI
+beyond one binary at a time. This is direct prep for Stage 25's "AI
 decompiler helper" project, which builds on exactly this scripting
 interface.
 

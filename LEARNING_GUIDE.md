@@ -20,8 +20,8 @@ for the full stage-by-stage plan and `CLAUDE.md` for how an AI instructor
 
 ## Realistic time expectations
 
-Per `ROADMAP.md`'s own estimates: roughly **3–3.5 years part-time**
-(10–15 hrs/week) or **13–17 months full-time**, end to end. Stopping
+Per `ROADMAP.md`'s own estimates: roughly **3.75–4 years part-time**
+(10–15 hrs/week) or **14–18 months full-time**, end to end. Stopping
 partway still leaves a real, portfolio-worthy skillset — most stages
 stand on their own. Time estimates are cumulative per stage; add ~15%
 buffer on top.

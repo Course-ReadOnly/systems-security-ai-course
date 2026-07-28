@@ -2,7 +2,7 @@
 
 ## Why this matters
 
-Nearly every resource from here through Stage 23 assumes a Linux (or
+Nearly every resource from here through Stage 25 assumes a Linux (or
 Linux-like) shell: compilers, debuggers, `man` pages, wargames, CTF
 challenges, kernel source. Get fluent now and every later stage moves
 faster; stay shaky here and you'll be fighting the environment instead of
