@@ -39,6 +39,18 @@ systematic version of the manual exploitation you practiced in 13.1.
       identifying the specific bug
 - [ ] `git log` shows iteration
 
+## Security relevance
+
+Fuzzing is how a huge share of real-world memory-safety vulnerabilities
+are actually found in production software (browsers, kernels, parsers
+across every stage of this course) — it's the automated, exhaustive
+version of the manual bug-hunting Stage 1's "-Wall -Wextra clean" and
+valgrind discipline started building. Requirement 4's root-cause
+analysis step is what separates fuzzing from a party trick: finding a
+crash is easy, understanding whether it's an exploitable memory-safety
+bug (vs. a benign assertion) is the actual skill Stage 13's earlier
+project (13.1) also demands.
+
 ## When done
 
 Point me at the fuzzer + `git log` and the crash evidence. I'll check

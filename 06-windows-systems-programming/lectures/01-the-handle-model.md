@@ -13,8 +13,9 @@ safe way to refer to a kernel-managed resource — with `HANDLE`, and the
 differences between the two designs aren't cosmetic. They're the reason
 Windows malware analysis (Stage 12) and Windows internals work look and
 feel so different from the Linux equivalent: opaque handles instead of
-transparent integers, per-object reference counting instead of "close on
-last fd," and a kernel object namespace that's far richer than "file."
+transparent integers, explicit per-handle reference counting instead of
+invisible refcounting hidden behind a bare integer, and a kernel object
+namespace that's far richer than "file."
 Get this model straight now and every later Win32 API call — `CreateFile`,
 `CreateThread`, `CreateEvent`, `OpenProcess` — reads as "yet another
 `Create*`/`Open*` returning a `HANDLE` into the same table," instead of

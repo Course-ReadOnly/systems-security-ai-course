@@ -34,6 +34,18 @@ request/response HTTP.
 - [ ] `git log` shows iteration
 - [ ] README documenting the concurrency model and why
 
+## Security relevance
+
+A shared client list mutated concurrently from multiple connection
+threads is a textbook data race (see `SECURITY-CONCEPTS.md`'s "Race
+Conditions" entry) — the same class of bug as a TOCTOU, just with
+"iterate the list" and "a client disconnects" as the two racing
+operations instead of a file check and a file use. This project also
+has zero authentication by design (anyone who can reach the port can
+join and broadcast) — worth noticing explicitly as a real design
+tradeoff, not an oversight, since Stage 13 will spend real time on
+exactly what happens once you add auth to something like this.
+
 ## When done
 
 Point me at the source + `git log` and the multi-client session

@@ -36,6 +36,17 @@ This is the same category of tool Ghidra/`readelf` provide, built by hand.
 - [ ] README explaining what each section type parsed actually
       represents, in your own words
 
+## Security relevance
+
+Symbol tables and dynamic-linking metadata are exactly what a real RE
+workflow reads first to understand a binary's capabilities before
+diving into disassembly — imported/dynamic symbols name the exact
+outside-world interactions (network, file, process) a binary can
+perform. Requirement 3 (handling stripped binaries) matters because
+real malware is routinely stripped specifically to defeat this kind of
+easy triage — a parser that crashes instead of clearly reporting "no
+symbol table" is itself a small analysis-tooling failure.
+
 ## When done
 
 Point me at the source + `git log` and the `readelf` cross-checks —

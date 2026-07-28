@@ -37,6 +37,16 @@ conversion) by doing it by hand.
 - [ ] README documenting the syscall numbers used and the calling
       convention, in your own words
 
+## Security relevance
+
+Every buffer overflow/ROP technique Stage 13 will teach you to exploit
+happens at exactly this level — raw registers, a stack with no bounds
+checking, a calling convention enforced by nothing but convention. You
+won't hit an overflow in a 4-function calculator, but writing at this
+level once, by hand, is what makes "the return address lives on the
+stack right next to your buffer" a fact you've actually seen rather
+than a diagram you memorized.
+
 ## When done
 
 Point me at the source + `git log` plus the `strace` output. I'll check

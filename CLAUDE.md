@@ -48,7 +48,9 @@ STATUS.md                current stage/topic, dates, completed projects, blocker
 ```
 
 Stage folder names/numbers come from ROADMAP.md's stage list (00 Foundations
-through 25 Portfolio). Project folders within a stage are numbered
+through 27 Portfolio — see STATUS.md's 2026-07-28 note for why it's 27 and
+not 25: two stages were inserted and everything from old-20 renumbered).
+Project folders within a stage are numbered
 **`{stage}.{project}`** (e.g. `0.1-dotfiles-repo`, `0.2-workstation-setup`)
 so numbering stays unambiguous across stages — never just `01-name`. It's
 fine to scaffold a stage's project folders ahead of time; only the `SPEC.md`

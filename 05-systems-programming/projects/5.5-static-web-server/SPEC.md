@@ -40,6 +40,18 @@ people's code.
 - [ ] 404 case tested
 - [ ] `git log` shows iteration
 
+## Security relevance
+
+Path traversal is a named instance of a broader class covered in
+`SECURITY-CONCEPTS.md`'s "Access Control / Scoping" entry: a boundary
+the code is supposed to enforce (requests stay inside the document
+root) gets violated because the check happens on the wrong
+representation of the input (raw path segments instead of the
+fully-resolved, canonicalized path). A naive `strstr(path, "..")` check
+is exactly the kind of scope-check-on-the-wrong-representation bug that
+entry warns about — it's why the acceptance criteria specifically
+demands URL-encoded and absolute-path variants, not just literal `../`.
+
 ## When done
 
 Point me at the source + `git log`, with the path-traversal evidence

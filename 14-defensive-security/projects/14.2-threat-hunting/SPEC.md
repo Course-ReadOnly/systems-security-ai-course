@@ -31,6 +31,16 @@ material.
 - [ ] At least one demonstrates multi-source correlation explicitly
 - [ ] `git log` shows iteration (write-ups committed as completed)
 
+## Security relevance
+
+This is the without-a-rule-yet skill that makes 14.1's Sigma rules
+possible in the first place — every detection rule ever written started
+as a human noticing a suspicious pattern nobody had codified yet.
+Multi-source correlation (Requirement 3) matters because real attackers
+rarely leave one damning log line; the actual signal is usually only
+visible when events from different sources (auth logs, network logs,
+process logs) are read together.
+
 ## When done
 
 Point me at the write-ups + `git log`. I'll check whether the process

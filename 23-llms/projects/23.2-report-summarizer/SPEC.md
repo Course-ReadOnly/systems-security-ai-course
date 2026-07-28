@@ -38,6 +38,16 @@ teams actually have.
 - [ ] `git log` shows iteration
 - [ ] README documenting the output schema and prompt design
 
+## Security relevance
+
+Requirement 4's hallucination guard is this project's version of
+`SECURITY-CONCEPTS.md`'s "Prompt Injection" concern, from a different
+angle: a malware report is attacker-adjacent content (samples are often
+described using the malware author's own naming/strings), and a
+summarizer that fabricates plausible-sounding IOCs when the source is
+sparse is actively dangerous — a fake IOC fed into a blocklist wastes
+defender effort at best and creates false confidence at worst.
+
 ## When done
 
 Point me at the source + `git log` and the hallucination-test evidence

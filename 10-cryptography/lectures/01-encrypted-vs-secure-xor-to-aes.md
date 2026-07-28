@@ -72,16 +72,22 @@ choice is itself a security decision.** ECB (encrypt each block
 independently) leaks structure: identical plaintext blocks produce
 identical ciphertext blocks, so patterns in the input survive into the
 output (the classic demonstration: encrypt an image in ECB and its
-outline is still visible in the ciphertext). CBC and CTR both fix this
-by chaining each block's encryption to something that changes block to
-block. CTR is the sharper case to understand: it turns AES into a
-*stream* cipher by encrypting a counter and XORing the result with your
-plaintext — which means CTR mode's security depends entirely on that
-counter/nonce never repeating under the same key. Reuse a nonce in CTR
-and you've reconstructed the exact two-time-pad vulnerability above,
-just with an AES-generated keystream standing in for the XOR key. "AES"
-alone is not a complete security claim — mode and nonce handling are
-part of it.
+outline is still visible in the ciphertext). CBC fixes this by
+*chaining*: each block's ciphertext is XORed into the next block before
+encryption, so every block's output depends on every block before it —
+identical plaintext blocks no longer produce identical ciphertext. CTR
+fixes the same ECB problem a completely different way, with **no
+chaining at all**: it turns AES into a *stream* cipher by encrypting an
+independent counter value per block and XORing the result with your
+plaintext. Each block varies only because the counter does, not because
+of any dependency on neighboring blocks — which is exactly why CTR is
+parallelizable and randomly-accessible and CBC isn't. That
+independence is also CTR's failure mode: its security depends entirely
+on that counter/nonce never repeating under the same key. Reuse a nonce
+in CTR and you've reconstructed the exact two-time-pad vulnerability
+above, just with an AES-generated keystream standing in for the XOR
+key. "AES" alone is not a complete security claim — mode and nonce
+handling are part of it.
 
 **Round-tripping is not correctness; a test vector is.** Encrypt-then-
 decrypt returning your original input only proves your encrypt and

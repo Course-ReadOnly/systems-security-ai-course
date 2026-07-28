@@ -37,6 +37,17 @@ bits burned onto a chip your CPU actually reads.
       programming session
 - [ ] `git log` (for programmer source code) shows iteration
 
+## Security relevance
+
+Write-then-verify (Requirement 2) is integrity checking in its most
+literal form — the same principle behind 15.1's boot-image checksum,
+applied to the chip that stores your CPU's actual instruction
+semantics. It's also a small window into a real supply-chain attack
+surface: firmware/microcode implants (malicious modifications made at
+the programming stage, before a device ever reaches its user) are a
+genuine, documented attack class precisely because most systems trust
+what's already burned into a chip without re-verifying it.
+
 ## When done
 
 Point me at the source + `git log` and your verification evidence. I'll

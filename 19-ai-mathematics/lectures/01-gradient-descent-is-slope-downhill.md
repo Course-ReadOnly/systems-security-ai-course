@@ -51,8 +51,10 @@ Nothing about going from one dimension to a million changes the concept —
 it only changes whether you can still draw a picture of it.
 
 **Variance is what makes a loss function make sense as a single number to
-minimize.** Mean squared error — the default regression loss — is
-literally the *variance of the residuals*: how spread out your prediction
+minimize.** Mean squared error — the default regression loss — is the
+*variance of the residuals* whenever those residuals average to zero
+(true by construction for OLS at convergence, and the case worth
+building intuition on first): how spread out your prediction
 errors are around zero. A model with low-variance errors is consistently
 close to correct; one with high variance is wildly inconsistent even if
 its *average* error looks fine (a model that's +100 half the time and

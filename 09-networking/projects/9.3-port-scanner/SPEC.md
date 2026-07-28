@@ -36,6 +36,16 @@ systems you don't control is a real legal/ethical line, not a formality.
 - [ ] README stating explicitly what was scanned and confirming it was
       systems you own/control
 
+## Security relevance
+
+Already the load-bearing point of this project (Requirement 5 and the
+Goal's opening line): this is literally the reconnaissance tool Stage
+13's exploitation work depends on, and the same tool that makes
+unauthorized scanning a real legal exposure, not just bad manners. The
+scope discipline you build here (own systems only, stated explicitly
+in every README) is the exact habit this course expects to carry
+forward unprompted into every later offensive-security project.
+
 ## When done
 
 Point me at the source + `git log` and the cross-check against `ss`/

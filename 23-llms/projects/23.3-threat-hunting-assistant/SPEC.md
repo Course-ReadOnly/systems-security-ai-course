@@ -37,6 +37,16 @@ just its training knowledge.
 - [ ] README documenting the retrieval approach (how log data gets into
       the LLM's context)
 
+## Security relevance
+
+Log content is attacker-influenceable the moment an attacker knows
+logs are being fed to an LLM — a crafted username, URL, or user-agent
+string designed to read as an instruction rather than data is exactly
+the indirect prompt-injection pattern in `SECURITY-CONCEPTS.md`. Citation
+of source entries (Requirement 3) is the concrete defense here: an
+analyst who can verify every claim against the actual underlying log
+line isn't relying on the model's honesty alone.
+
 ## When done
 
 Point me at the source + `git log`. I'll check that answers are

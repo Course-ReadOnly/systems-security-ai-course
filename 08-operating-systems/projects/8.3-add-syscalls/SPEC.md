@@ -45,6 +45,17 @@ This is the concrete mechanics behind everything you've been calling
 - [ ] README documenting each new syscall's number, signature, and
       purpose
 
+## Security relevance
+
+Already the load-bearing point of Requirement 5: a syscall is the
+kernel's entire attack surface from user-space, and every argument it
+receives is attacker-controlled by definition, no matter how trusted
+the calling program looks. **Dirty COW** (CVE-2016-5195) — a real,
+years-unpatched Linux privilege-escalation bug rooted in exactly this
+class of insufficiently-validated kernel-side assumption — is the
+canonical example; see `SECURITY-CONCEPTS.md`'s "Kernel-Space TOCTOU"
+entry for the full mechanism.
+
 ## When done
 
 Point me at your fork + `git log`. I'll check the kernel-side argument

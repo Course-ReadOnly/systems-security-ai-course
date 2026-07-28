@@ -38,6 +38,16 @@ use in later stages are built and shipped).
 - [ ] Confirm static linking (e.g. `file` or `ldd` output on the binary)
 - [ ] `git log` shows iteration
 
+## Security relevance
+
+Worth noticing explicitly: single-binary, statically-linked distribution
+(Requirement 3) is *why* so much real security tooling ships this way —
+a tool an analyst can copy onto an isolated VM or air-gapped box and run
+immediately, with no dependency install step (and no matching increase
+in that box's attack surface from a package manager reaching out to the
+network), is operationally safer in exactly the contexts Stage 12's
+isolated-analysis work cares about.
+
 ## When done
 
 Point me at the source + `git log`. I'll check the subcommand structure

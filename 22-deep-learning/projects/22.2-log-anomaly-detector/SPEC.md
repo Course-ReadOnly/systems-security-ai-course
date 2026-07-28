@@ -42,6 +42,17 @@ hand-written detection rules. This is explicit foreshadowing of Stage
 - [ ] `git log` shows iteration
 - [ ] README explaining the sequence-model architecture chosen and why
 
+## Security relevance
+
+Already this project's core subject: anomaly detection is fundamentally
+a security-shaped ML problem, precisely because the "interesting" class
+(a real intrusion) is rare by definition — the severe class imbalance
+Requirement 4 forces you to confront isn't incidental, it's the whole
+reason naive accuracy is meaningless here. Requirement 5's false-positive
+inspection matters for the same reason a noisy YARA/Sigma rule does
+(Stages 12/14): an anomaly detector that cries wolf constantly trains
+its own analysts to stop trusting it.
+
 ## When done
 
 Point me at the source + `git log` and the precision/recall results.

@@ -44,6 +44,16 @@ this; see the Stage 24 README's scope/safety note before starting.
 - [ ] At least one explicit cross-reference to an existing
       `SECURITY-CONCEPTS.md` entry, or a proposed new entry if none fits
 
+## Security relevance
+
+This project *is* the security relevance — it's the Stage 24 equivalent
+of Stage 13's exploit labs, applied to smart contracts instead of web/
+binary targets. Requirement 4's explicit ask to cross-reference (or
+propose) `SECURITY-CONCEPTS.md` entries is intentional: reentrancy is a
+close cousin of the "Race Conditions" entry, access-control bugs mirror
+"Access Control / Scoping," and documenting that connection yourself is
+part of the exercise, not something to have handed to you.
+
 ## When done
 
 Point me at the write-ups and `git log`. I'll pick 2-3 levels and ask

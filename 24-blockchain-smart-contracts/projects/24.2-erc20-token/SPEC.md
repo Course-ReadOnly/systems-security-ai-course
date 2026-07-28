@@ -46,6 +46,18 @@ than copy-pasting OpenZeppelin's contract and calling it done.
 - [ ] No real wallet seed phrase or private key committed anywhere in
       the repo — confirm your `.gitignore` actually excludes it
 
+## Security relevance
+
+The allowance pattern this spec calls out as "most learners get subtly
+wrong" (Requirement 3) is a real, historically-exploited ERC-20 bug
+class — an unchecked or incorrectly-decremented allowance in
+`transferFrom` has caused real token-draining incidents in production
+contracts. This project's committed-secret warning is the same
+discipline as any other credential-handling code (see
+`SECURITY-CONCEPTS.md`), just with an unusually unforgiving failure
+mode: a leaked key on a public chain can't be rotated after the fact
+the way a leaked API key can.
+
 ## When done
 
 Point me at the source, `git log`, test output, and the testnet

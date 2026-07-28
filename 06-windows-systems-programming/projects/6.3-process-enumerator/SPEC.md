@@ -35,6 +35,18 @@ injection/manipulation.
       you can't open)
 - [ ] `git log` shows iteration
 
+## Security relevance
+
+This read-only enumeration is the exact reconnaissance step that
+precedes process injection: an attacker (or a legitimate EDR tool
+doing the same thing defensively) has to enumerate processes and their
+loaded modules *before* picking a target to inject into or hook — you
+can't inject into a process you haven't first identified. Building the
+"list what's running" half yourself here is what makes Stage 12's more
+serious malware-analysis tooling, and eventually the injection
+techniques Stage 13 covers from the offensive side, feel like natural
+extensions rather than opaque API calls.
+
 ## When done
 
 Point me at the source + `git log`. I'll check that snapshot handles are

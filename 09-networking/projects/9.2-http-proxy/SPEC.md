@@ -36,6 +36,19 @@ plumbing behind tools you'll rely on constantly from Stage 13 onward
 - [ ] `git log` shows iteration
 - [ ] README documenting the keep-alive decision made
 
+## Security relevance
+
+A proxy that sits between client and server is inherently a trust
+boundary in miniature — every header it relays is attacker-influenceable
+data flowing through your code (see `SECURITY-CONCEPTS.md`'s "Access
+Control / Scoping" and "Trust Boundaries" entries for the general
+pattern). Mangled `Content-Length` handling specifically is a real,
+named bug class (request/response smuggling) when a proxy and the
+server it forwards to disagree about where a message ends — you won't
+build a smuggling-capable proxy here, but the header-relay correctness
+this project's acceptance criteria demands is the same discipline that
+prevents it.
+
 ## When done
 
 Point me at the source + `git log`. I'll check header-relay correctness

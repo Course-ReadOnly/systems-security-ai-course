@@ -39,6 +39,17 @@ solutions and plenty of real-world binary patching.
       break anything unrelated)
 - [ ] `git log` shows iteration
 
+## Security relevance
+
+Binary patching is dual-use in the most direct sense: the exact
+technique used here to bypass a crackme's check is the same technique
+used to bypass a real license check, disable a security control in a
+compromised binary, or (defensively) apply a hex-level fix when source
+isn't available. Requirement 2 (don't corrupt anything else) matters
+for a security reason beyond correctness — a patch that shifts file
+offsets without updating dependent structures is exactly the kind of
+mistake that turns a working exploit/patch into a crashed process.
+
 ## When done
 
 Point me at the tool + `git log` and the before/after disassembly diff

@@ -29,6 +29,18 @@ threads. Same scope-of-use rules as 9.3 apply.
 - [ ] `git log` shows iteration
 - [ ] README stating what was scanned, confirming permission
 
+## Security relevance
+
+Same permission-scope discipline as Stage 9.3, restated deliberately
+rather than assumed — the point of repeating it here is that the habit
+should transfer to a new language and toolchain, not just live attached
+to one specific project. The worker-pool-vs-unbounded-goroutines
+distinction this project's review focuses on is also a real
+availability concern: an unbounded scanner can exhaust local file
+descriptors or trigger rate-limiting/blocking on the target, which is a
+self-inflicted denial-of-service even against a host you're authorized
+to scan.
+
 ## When done
 
 Point me at the source + `git log`. I'll check the goroutine/channel

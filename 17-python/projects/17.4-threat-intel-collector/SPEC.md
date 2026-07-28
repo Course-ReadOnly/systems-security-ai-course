@@ -39,6 +39,17 @@ with real external data sources.
 - [ ] README documenting the feed source, why it was chosen, and the
       intended run schedule
 
+## Security relevance
+
+A threat-intel collector is itself part of the security tooling supply
+chain — feeding bad or duplicated data into downstream detection rules
+(Stage 14) or blocklists degrades their quality the same way a noisy
+YARA rule does. Requirement 4 (graceful failure on an unavailable feed)
+matters because a collector that crashes instead of logging a missed
+window creates a silent gap in intel coverage — exactly the kind of
+failure that's invisible until someone asks "why didn't we know about
+this indicator."
+
 ## When done
 
 Point me at the source + `git log` and the live-feed output. I'll check

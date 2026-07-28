@@ -35,6 +35,18 @@ serial terminal on your computer).
 - [ ] `git log` shows iteration
 - [ ] README documenting the specific registers configured and why
 
+## Security relevance
+
+Requirement 3 (buffer overrun on receive) is Stage 1's memory-safety
+lesson at the hardware register level: data arriving faster than it's
+consumed and overwriting a fixed-size receive buffer is a real buffer
+overflow, just triggered by physical signal timing instead of a
+malicious input string. Embedded devices are also disproportionately
+exposed here — no MMU/ASLR/stack canaries the way Stage 15's
+"no OS safety net" framing already covers, so a driver-level overflow
+on a microcontroller has fewer mitigations standing between it and
+real impact than the equivalent bug would on a full OS.
+
 ## When done
 
 Point me at the source + `git log` and your terminal session evidence.

@@ -43,6 +43,17 @@ Same designated-legal-practice-platform framing as 24.4.
 - [ ] Cross-reference to `SECURITY-CONCEPTS.md` where a matching entry
       exists, same as 24.4
 
+## Security relevance
+
+Already this project's entire subject, at the most advanced level this
+course reaches on the topic: these challenges are modeled on real,
+high-value production exploits, and the economic-dimension requirement
+(Requirement 3) is what separates this from 24.4's more contained,
+single-contract bugs — flash loans mean an attacker's required capital
+and a protocol's actual economic security assumptions are two
+different things, which is precisely the gap real DeFi exploits have
+repeatedly found.
+
 ## When done
 
 Point me at the write-ups, solving scripts, and `git log`. I'll ask

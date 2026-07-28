@@ -45,6 +45,16 @@ the point as the network architecture.
       what each dimension actually represents (batch size, features,
       hidden units, classes)
 
+## Security relevance
+
+A trained classifier's confidence output is only as trustworthy as your
+understanding of how it was produced — this project is where you build
+that understanding from raw matrix operations rather than a framework's
+`.fit()` call. That groundwork pays off directly in Stage 21's
+precision/recall work (a model can be accurate and still miscalibrated)
+and Stage 25's "when to trust a model" question, both of which assume
+you understand what's actually happening between input and output.
+
 ## When done
 
 Point me at the source, `git log`, the gradient-check output, and the

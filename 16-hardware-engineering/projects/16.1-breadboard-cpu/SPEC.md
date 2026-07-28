@@ -34,6 +34,17 @@ clock edge is real voltage on a real wire.
 - [ ] `git log` (for any documentation/schematics/microcode you wrote)
       shows iteration
 
+## Security relevance
+
+Every signal in this build is real, observable voltage on a real wire
+— which is the physical substrate `SECURITY-CONCEPTS.md`'s "Side-Channel
+Attacks" entry describes in the abstract (an attacker who can observe a
+chip's power draw, EM emissions, or timing can sometimes extract secret
+data the logic never "officially" exposed). You won't build a side-channel
+attack here, but having watched real current flow through real gates on
+a breadboard makes "physical side channels are real, not theoretical"
+something you've seen rather than been told.
+
 ## When done
 
 Point me at your documentation + `git log` and the photo/video evidence.

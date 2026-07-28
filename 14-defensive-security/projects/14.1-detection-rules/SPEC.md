@@ -41,6 +41,17 @@ defender would actually be watching for.
       13, with the connection documented
 - [ ] `git log` shows iteration
 
+## Security relevance
+
+This project closes the loop the whole security track has been
+building toward: Requirement 2 explicitly ties a rule back to something
+you personally exploited in Stage 13, which is the actual point of
+teaching attack before defense. Requirement 3's behavioral-over-hash
+rule matters because hash/filename detection is structurally blind to
+LOLBin-style attacks that never drop a new file at all — see
+`SECURITY-CONCEPTS.md`'s "Living-Off-The-Land" entry for the full
+argument.
+
 ## When done
 
 Point me at the rules + `git log` and the test evidence. I'll check

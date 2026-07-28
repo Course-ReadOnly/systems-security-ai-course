@@ -40,6 +40,18 @@ problem where accuracy alone lies to you.
 - [ ] `git log` shows iteration
 - [ ] README explaining the feature representation used
 
+## Security relevance
+
+Spam filtering is adversarial ML in its original, oldest form — spammers
+actively adapt their content specifically to evade whatever filter is
+currently deployed, which is why a static model's accuracy degrades
+over time in production even with no code changes. The precision/recall
+tradeoff you're forced to reason about here (Requirement 3) is the same
+tradeoff 12.3's YARA rules and 14.1's Sigma rules face: a false positive
+(blocking real mail) has a different cost than a false negative (spam
+getting through), and the "right" threshold depends on which cost
+matters more to whoever's using the tool.
+
 ## When done
 
 Point me at the source + `git log`. I'll check the train/test split is

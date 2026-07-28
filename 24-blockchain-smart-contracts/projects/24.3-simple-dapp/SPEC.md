@@ -42,6 +42,17 @@ frontend is a reasonable stretch if you want it.
       "sent" and being "confirmed," and how your client distinguishes
       the two
 
+## Security relevance
+
+The sent-vs-confirmed distinction this spec requires you to handle
+correctly is a real, exploited category of bug in production DApps —
+a client (or worse, another smart contract) that acts on an
+unconfirmed transaction can be misled by a transaction that later
+reverts, gets replaced, or lands in a different order than expected.
+Getting this right here is direct preparation for reasoning about
+transaction-ordering attacks (front-running, sandwich attacks) that
+Damn Vulnerable DeFi (24.5) explores from the attacker's side.
+
 ## When done
 
 Point me at the source, `git log`, and the testnet explorer links for

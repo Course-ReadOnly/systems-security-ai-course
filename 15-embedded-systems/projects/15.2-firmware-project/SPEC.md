@@ -33,6 +33,17 @@ peripheral interaction, not just a blinking LED.
 - [ ] `git log` shows iteration
 - [ ] README describing the hardware setup and what the firmware does
 
+## Security relevance
+
+Requirement 2's `volatile`/ISR-scope warning is a real-time cousin of
+the race conditions covered in `SECURITY-CONCEPTS.md` — an interrupt
+handler racing the main loop over shared state without `volatile` (or
+proper synchronization) is the embedded equivalent of a TOCTOU bug,
+just triggered by a hardware interrupt instead of a scheduler
+preemption. This class of bug is also exactly why "worked once" isn't
+evidence (Requirement 3) — timing-dependent bugs surface intermittently
+by nature.
+
 ## When done
 
 Point me at the source + `git log` and your evidence of it running. I'll

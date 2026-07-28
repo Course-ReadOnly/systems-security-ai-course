@@ -38,6 +38,18 @@ applied to a model that actually learns its own features.
 - [ ] `git log` shows iteration
 - [ ] README explaining the architecture (layers, why this shape)
 
+## Security relevance
+
+The gradient computation this network trains with (backprop, from Stage
+20) is the exact same mechanism an **adversarial example** attack
+uses in reverse — a small, often visually-imperceptible pixel
+perturbation, computed via gradient ascent on the loss with respect to
+the *input* instead of the weights, can flip a confidently-correct
+classification to a confidently-wrong one. You won't build that attack
+here, but understanding gradients from the inside (Stage 20) is what
+makes "a CNN's confidence isn't robustness" something you can reason
+about rather than take on faith.
+
 ## When done
 
 Point me at the source + `git log` and the loss curves/confusion matrix.

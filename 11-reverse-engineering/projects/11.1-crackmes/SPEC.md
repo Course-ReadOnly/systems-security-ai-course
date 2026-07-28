@@ -39,6 +39,16 @@ possible to write.
       not just the answer
 - [ ] `git log` shows iteration (one commit per crackme is reasonable)
 
+## Security relevance
+
+This is applied reverse engineering — every crackme's "protection
+logic" is a miniature version of the same static/dynamic analysis
+techniques Stage 12 applies to real malware and Stage 13 applies to
+finding vulnerabilities. Requirement 4's anti-debugging tricks are the
+exact same techniques (timing checks, `ptrace` self-detection) real
+malware uses to evade sandboxed analysis — see `SECURITY-CONCEPTS.md`'s
+"Anti-Analysis, Anti-Debugging, and Sandbox/VM Evasion" entry.
+
 ## When done
 
 Point me at the write-ups + `git log`. I'll check whether the

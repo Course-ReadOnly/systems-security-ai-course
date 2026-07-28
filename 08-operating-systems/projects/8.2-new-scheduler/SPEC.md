@@ -38,6 +38,22 @@ next, with observable, measurable consequences.
 - [ ] README explaining the scheduling policy chosen and why, plus what
       the before/after comparison demonstrates
 
+## Security relevance
+
+Scheduling policy is a real, if under-appreciated, security surface:
+if a process can influence its own scheduling priority (or exploit a
+policy's assumptions) it can starve other processes of CPU time — a
+local denial-of-service that never touches memory safety at all, just
+fairness. Priority-based schedulers specifically are also a classic
+setting for **priority inversion** (a low-priority process holding a
+resource a high-priority process needs, while medium-priority
+processes freely preempt the low-priority one and indefinitely delay
+the high-priority one) — real enough to have caused the Mars
+Pathfinder's in-flight watchdog resets. Requirement 4 (don't break
+existing functionality) is itself a security-adjacent discipline: a
+scheduler change that starves the filesystem or shell of CPU time is a
+self-inflicted availability bug.
+
 ## When done
 
 Point me at your fork + `git log` and the before/after comparison. I'll

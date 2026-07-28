@@ -38,6 +38,19 @@ parser" project, which goes further.
 - [ ] README explaining, in your own words, what a `PT_LOAD` segment
       actually is and why it's the part that matters for loading
 
+## Security relevance
+
+ELF-parsing code is a real attack surface in its own right — a
+malformed or adversarially-crafted binary handed to a loader, a
+disassembler, or an AV/EDR product's static-analysis engine is exactly
+the kind of untrusted input a parser-confusion bug lives in (see
+`SECURITY-CONCEPTS.md`'s "Injection" and general parser-hardening
+themes). Requirement 4's "reject non-ELF files cleanly" is the same
+discipline as any other untrusted-input parser in this course — the
+difference here is that real tools built on exactly this logic (Stage
+11's parser, and eventually disassemblers/loaders generally) get fed
+files by people actively trying to break them.
+
 ## When done
 
 Point me at the source + `git log` plus the `readelf -l` comparison —

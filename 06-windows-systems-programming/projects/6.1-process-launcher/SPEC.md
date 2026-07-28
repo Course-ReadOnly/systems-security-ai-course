@@ -37,6 +37,21 @@ gives you integer file descriptors/PIDs.
       (not just a raw error code)
 - [ ] `git log` shows iteration
 
+## Security relevance
+
+`CreateProcess`'s path handling is where the real-world **"unquoted
+service path"** vulnerability class comes from: if a path containing
+spaces (`C:\Program Files\App\app.exe`) is ever passed unquoted, and an
+attacker has write access to any parent directory in that chain
+(`C:\Program.exe`, `C:\Program Files\App.exe`), Windows will try each
+space-delimited segment as a candidate executable before reaching the
+real one — a real, commonly-exploited local privilege-escalation
+pattern. Always quote the full path, and never build it by
+concatenating untrusted input. Handle leaks matter here too, beyond
+tidiness: a process that leaks handles under attacker-controlled load
+is a real (if unglamorous) denial-of-service vector once the handle
+table fills up.
+
 ## When done
 
 Point me at the source + `git log` plus your handle-count evidence.

@@ -37,6 +37,16 @@ standard, applied to a completely different domain.
       numbers
 - [ ] `git log` shows real iteration
 
+## Security relevance
+
+Same memory-safety discipline as every other Stage 1-style C project in
+this course, applied to matrix/gradient buffers instead of strings or
+file data — a hand-rolled matmul with an off-by-one is a real
+out-of-bounds read/write, not a training-accuracy footnote. Real
+production ML inference code (especially on embedded/edge devices,
+tying back to Stage 15) is routinely written this close to the metal,
+for exactly this level of control over memory and performance.
+
 ## When done
 
 Point me at the source, `git log`, and the Valgrind output. I'll

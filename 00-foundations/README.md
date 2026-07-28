@@ -39,16 +39,19 @@ nothing in Stage 1 onward is blocked by "how do I even run this."
 | 0.6 | Capstone: tie 0.1-0.5 together | `projects/0.6-capstone/` |
 
 Folders are numbered `{stage}.{project}` so it stays unambiguous once later
-stages have projects of their own. `SPEC.md` for each gets generated on
-demand when you actually reach that project, not all at once — the folders
-above are scaffolded ahead of time, but most are empty until then.
+stages have projects of their own. All six `SPEC.md` files above
+(0.1-0.6) were generated ahead of schedule (2026-07-27, per learner
+request — see `STATUS.md`) rather than strictly on-demand; treat 0.3
+onward as drafts to revise once actually reached, not contracts.
 
 **0.6 (added 2026-07-26, not in the original ROADMAP.md project list):** a
 capstone combining the dotfiles repo, workstation setup script, bash
 automation scripts, file organizer, and backup utility into one coherent
 setup — likely a single entry-point script that calls into the others,
 mirroring how `0.2`'s `setup.sh` already calls into `0.1`'s `install.sh`.
-Exact spec TBD when reached, per the same on-demand rule as everything else.
+Its `SPEC.md` exists and is written, but is explicitly flagged in-file as
+the most likely of the six to need real revision, since it depends on
+the exact shape 0.3-0.5 end up taking.
 
 On the learner's WSL machine, each numbered project lives as its own git
 repo under `~/00-foundations-project/{n.n-name}/` (e.g.

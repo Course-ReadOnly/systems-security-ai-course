@@ -37,6 +37,18 @@ personally parsed — the same skill Stage 14's network-monitoring tools
       handled without crashing on the ones you don't fully parse
 - [ ] `git log` shows iteration
 
+## Security relevance
+
+Packet capture is a real privacy/scope boundary, not just a
+technical permission (`CAP_NET_RAW`) — anyone on the same network
+segment who can capture traffic can potentially read anything sent in
+plaintext, which is exactly why Stage 10's crypto work and the modern
+push toward TLS-everywhere matter as much as they do. Requirement 5's
+own-machine/own-network restriction is the same scope discipline as
+9.3's port scanner, for the same underlying reason: this tool becomes a
+real eavesdropping capability the moment it's pointed at a network you
+don't control.
+
 ## When done
 
 Point me at the source + `git log` and the `tcpdump` cross-check — that

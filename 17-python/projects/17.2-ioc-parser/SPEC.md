@@ -38,6 +38,16 @@ ranges, `.test` domains) — not real infrastructure or malware.
 - [ ] README documenting the two input formats supported and the common
       internal schema chosen
 
+## Security relevance
+
+Normalization correctness (Requirement 2) has real consequences at
+scale: a blocklist that treats `203.0.113.5` and `203.0.113.5/32` as
+two different indicators because normalization missed a CIDR-notation
+case fails to actually block the second occurrence — a false sense of
+coverage is worse than an obviously incomplete one. This is the same
+class of consistency problem as 21.x's ML feature engineering, applied
+to threat-intel plumbing instead of model inputs.
+
 ## When done
 
 Point me at the source + `git log`. I'll check the normalization logic

@@ -37,6 +37,19 @@ anything real, and say so explicitly.
 - [ ] README contains the educational-use disclaimer, plus an
       explanation of the cipher/mode implemented in your own words
 
+## Security relevance
+
+The disclaimer requirement exists because a home-grown crypto
+implementation is exactly the "rolled your own" risk `SECURITY-CONCEPTS.md`'s
+"Cryptographic Misuse" entry and 10.1's spec both warn against —
+correct-looking output on your own test cases proves nothing about
+resistance to side-channel attacks (non-constant-time comparisons,
+timing leaks), and matching NIST test vectors proves only functional
+correctness, not that this implementation is safe to protect anything
+real with. Understanding AES's internals here is what makes 10.1's
+"never implement your own cipher" rule land as informed judgment
+rather than an arbitrary restriction.
+
 ## When done
 
 Point me at the source + `git log` and the test-vector evidence. If the

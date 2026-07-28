@@ -33,6 +33,17 @@ under the hood, not just calling it.
 - [ ] `git log` shows iteration
 - [ ] README explaining the routing rule chosen
 
+## Security relevance
+
+A reverse proxy sits directly on a trust boundary between the public
+internet and internal backends — `Host` header mishandling specifically
+is a real, named bug class (host header injection/confusion) when a
+proxy trusts a client-supplied `Host` value for routing or cache-key
+decisions without validating it against the actual configured backend
+set. Requirement 4 (backend-down handling) matters for availability
+too: a reverse proxy that crashes when one backend goes down takes
+every backend behind it offline with it.
+
 ## When done
 
 Point me at the source + `git log`. I'll check header handling (`Host`,

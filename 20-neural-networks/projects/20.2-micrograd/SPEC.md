@@ -48,6 +48,16 @@ but the implementation and understanding need to be genuinely yours.
       loss curve shown
 - [ ] `git log` shows real iteration
 
+## Security relevance
+
+Every framework's autograd engine — the exact mechanism you're building
+a small version of here — is what every adversarial-example generator,
+every model-extraction attack, and every gradient-based training run
+(malicious or not) is built on top of. There's no separate "attacker's
+autograd" — it's the same `.backward()` call, pointed at a different
+target (the input instead of the weights). Understanding this mechanism
+from the inside is what makes that distinction visible at all.
+
 ## When done
 
 Point me at the source, `git log`, and the gradient-check output.

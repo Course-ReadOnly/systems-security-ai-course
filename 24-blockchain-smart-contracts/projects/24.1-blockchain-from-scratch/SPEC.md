@@ -52,6 +52,16 @@ memorized vocabulary.
       validate again — and why that's the actual security property a
       blockchain provides
 
+## Security relevance
+
+Already this project's entire point: the hash-chain is a tamper-evidence
+mechanism, not tamper-*prevention* — anyone can still edit a block, the
+protocol just makes that edit immediately detectable and expensive to
+hide. This is the load-bearing security property everything in the
+rest of Stage 24 builds on top of; 24.4/24.5's exploits never attack
+the chain mechanics themselves, they attack application logic (smart
+contracts) built on top of an already-sound foundation.
+
 ## When done
 
 Point me at the source, `git log`, and the tampering-detection output.

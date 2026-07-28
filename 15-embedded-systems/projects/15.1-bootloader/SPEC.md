@@ -36,6 +36,17 @@ hardware instead of an emulator.
 - [ ] README documenting the memory layout (bootloader region vs.
       application region)
 
+## Security relevance
+
+Requirement 3's integrity check is a miniature version of **Secure
+Boot** — the real-world chain-of-trust model where each stage
+cryptographically (or, here, minimally via checksum) verifies the next
+before executing it, so a compromised or corrupted image can't silently
+run. A bootloader that jumps to whatever's in flash unconditionally has
+no way to distinguish a legitimate update from tampered/malicious
+firmware — the exact gap real embedded-security work spends significant
+effort closing.
+
 ## When done
 
 Point me at the source + `git log` and a description/recording of it

@@ -40,6 +40,18 @@ own cipher, reusing a nonce, storing a password instead of a hash of it)
 - [ ] README stating exactly which library, KDF, and cipher mode were
       used, and why
 
+## Security relevance
+
+This entire project *is* the security relevance — see
+`SECURITY-CONCEPTS.md`'s "Cryptographic Misuse" entry for the general
+pattern this project is built to avoid. Nonce reuse under AES-GCM
+specifically doesn't just weaken security, it can fully break
+confidentiality and authenticity for the affected messages (the
+keystream reuse reduces to the same two-time-pad math XOR-based
+schemes fail on, plus a forgeable authentication tag) — which is why
+"never reused" is an acceptance-criteria requirement with pasted
+evidence, not a suggestion.
+
 ## When done
 
 Point me at the source + `git log`. I will check nonce/IV reuse and KDF

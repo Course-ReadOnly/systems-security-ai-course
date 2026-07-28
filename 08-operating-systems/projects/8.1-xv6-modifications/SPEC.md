@@ -34,6 +34,16 @@ comfort navigating a real (if small) kernel codebase — not a big feature.
       the original repo)
 - [ ] README describing the boot sequence in your own words
 
+## Security relevance
+
+This project is orientation, not depth, so the security payoff is
+positional rather than technical: everything from here through 8.3 (and
+Stage 26's kernel module work later) happens *inside* the trust
+boundary that Stage 13 attacks and Stage 14 defends from the outside.
+Getting comfortable navigating real kernel source now is what makes
+"kernel-mode vs. user-mode" something you've actually walked across,
+not just a diagram.
+
 ## When done
 
 Point me at your fork + `git log` and the boot/session evidence. This

@@ -35,15 +35,22 @@ across every position.** A kernel (e.g. 3x3) slides across the image,
 computing a dot product with the pixels under it at every position, and
 the *same* kernel weights are reused everywhere. This is parameter
 sharing, and it has a direct consequence worth naming precisely:
-**translation invariance** — if the kernel learns to detect a vertical
-edge, it detects that edge wherever it appears in the image, because
-it's literally the same weights being applied at every location. This
-is the inductive bias: you're telling the network, before it's seen a
-single example, "whatever pattern matters, it can occur anywhere in the
-image and should be recognized the same way regardless." For images,
-that assumption is almost always true (a cat is a cat whether it's in
-the top-left or center), which is exactly why it works so well — it's
-not a generic trick, it's a correct prior for this specific data type.
+**translation *equivariance*** — if the kernel learns to detect a
+vertical edge, that edge produces the same activation pattern in the
+kernel's output no matter where it appears, because it's literally the
+same weights being applied at every location; shift the input and the
+feature map shifts with it, in lockstep. That's a weaker, more
+mechanical property than true translation *invariance* (the final
+output being completely unaffected by position) — invariance is
+something the network builds on top of equivariance, via pooling
+(below) and depth, not something a single conv layer gives you outright.
+This is the inductive bias: you're telling the network, before it's
+seen a single example, "whatever pattern matters, it can occur anywhere
+in the image and should be detected the same way regardless." For
+images, that assumption is almost always true (a cat is a cat whether
+it's in the top-left or center), which is exactly why it works so well
+— it's not a generic trick, it's a correct prior for this specific data
+type.
 
 **Stacking conv layers builds a feature hierarchy, replacing hand
 engineering.** In 21.1 you hand-built features (TF-IDF, bag-of-words)
@@ -59,10 +66,14 @@ of the loss — this is the actual meaning of "deep" learning.
 **Pooling (typically max pooling) downsamples between conv layers**,
 keeping the strongest activation in each small region and discarding the
 rest. This does two things: it shrinks the spatial size (less
-computation, fewer parameters downstream), and it adds a small amount of
-additional positional slack — a feature detected slightly off from
-where pooling expects it still survives, because pooling only cares
-about the max in a neighborhood, not the exact position within it.
+computation, fewer parameters downstream), and it's the step that turns
+equivariance into approximate *invariance* — a feature detected a pixel
+or two off from where pooling expects it still survives and produces
+the same downstream result, because pooling only cares about the max in
+a neighborhood, not the exact position within it. Stack enough
+conv+pool layers and the network's final output becomes progressively
+less sensitive to exactly where in the image a feature occurred, which
+is the actual invariance a trained CNN exhibits end to end.
 
 **Depth increases the effective receptive field.** A single 3x3 kernel
 only "sees" a 3x3 patch of the input. But a second 3x3 conv layer stacked
@@ -79,8 +90,8 @@ training starts, watch train and validation loss together: both
 dropping together means the network is learning something general;
 train loss still dropping while validation loss climbs back up is the
 concrete signature of overfitting — the network has started memorizing
-training examples rather than learning the translation-invariant
-features above. 22.1's acceptance criteria requires you to show and
+training examples rather than learning the shift-tolerant, equivariant/
+invariant features above. 22.1's acceptance criteria requires you to show and
 explain this curve for exactly this reason.
 
 ## Required reading
@@ -107,12 +118,13 @@ lesson 1.
    output neuron at the top, and why isn't it just 3x3?
 4. Your training loss keeps dropping smoothly across 50 epochs while
    your validation loss bottoms out at epoch 12 and then rises. What's
-   happening, and what does it have to do with the "translation
-   invariance is a correct prior for images" argument above — is the
-   model's *architecture* the problem here, or something else?
+   happening, and what does it have to do with the "shift tolerance is a
+   correct prior for images" argument above — is the model's
+   *architecture* the problem here, or something else?
 5. Why would applying the exact same convolutional inductive bias
-   (translation invariance) to something like tabular financial data
-   likely be a *wrong* assumption, unlike with images?
+   (translation equivariance, becoming approximate invariance via
+   pooling) to something like tabular financial data likely be a
+   *wrong* assumption, unlike with images?
 
 Answers withheld until asked.
 

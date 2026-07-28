@@ -45,6 +45,16 @@ want more scale/variety.
 - [ ] README documenting the log format targeted and the normalized
       schema chosen
 
+## Security relevance
+
+Already directly stated in the "When done" note below, worth making
+explicit: a log parser that silently drops malformed lines is a real,
+easy-to-miss availability problem for security specifically — the one
+dropped line in a threat-hunting context (Stage 14.2) could be the
+exact evidence of an intrusion. Requirement 3's "skip and count, don't
+silently drop" discipline is a small design choice with outsized
+consequences once this tool sits between a defender and the truth.
+
 ## When done
 
 Point me at the source + `git log`. I'll check the malformed-line

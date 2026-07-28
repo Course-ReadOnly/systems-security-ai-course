@@ -34,6 +34,17 @@ interface.
 - [ ] `git log` shows iteration
 - [ ] README explaining what the script automates and why it's useful
 
+## Security relevance
+
+Scripted, headless analysis (Requirement 3) is what makes RE work scale
+past "one analyst, one binary, one afternoon" into something that keeps
+up with real malware volume — the same reason Stage 25's AI-assisted
+tooling builds on exactly this scripting interface rather than
+replacing manual RE outright. The manual spot-check requirement exists
+because an automation script that's subtly wrong at scale is worse than
+no automation — it produces confident, wrong answers across every
+binary it touches, not just one.
+
 ## When done
 
 Point me at the source + `git log` and the headless-mode run evidence.

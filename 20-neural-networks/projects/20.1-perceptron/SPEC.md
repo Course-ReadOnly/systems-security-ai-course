@@ -45,6 +45,18 @@ multi-layer networks exist at all.
 - [ ] `git log` shows real iteration
 - [ ] No ML-framework imports anywhere in the training code
 
+## Security relevance
+
+The gradient you're computing by hand here is the same mathematical
+object an **adversarial example** attack computes — instead of a
+gradient with respect to weights (used to update the model), an
+adversarial attack takes a gradient with respect to the *input* (used
+to find the smallest input perturbation that flips the model's
+decision). Understanding backprop from the inside, as you're doing
+here, is what makes Stage 25's "can this model's output be trusted"
+question something you can reason about mechanically, not just
+philosophically.
+
 ## When done
 
 Point me at the source, `git log`, and the loss plot. I'll ask you to

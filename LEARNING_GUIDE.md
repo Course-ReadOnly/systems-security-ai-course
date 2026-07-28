@@ -74,12 +74,17 @@ individual projects with buzzwords.
 
 ## Sample data
 
-`samples/` holds small, reusable test fixtures (sample text, etc.) for
-exercises that need real input rather than inventing your own each time.
-Stage-specific fixtures (sample source files, binaries, etc.) get added
-under each stage as it's actually reached — not generated speculatively
-ahead of time, since they're closer to project content than incidental
-test data.
+`samples/` holds small, reusable, cross-stage test fixtures (sample
+text, etc.) for exercises that need real input rather than inventing
+your own each time. Stage-specific fixtures (sample config/JSON/CSV/log
+files, etc.) live under each project's own folder, at
+`{project}/samples/`, added as raw material when a project genuinely
+needs input to run against — this can happen ahead of the stage being
+reached if explicitly requested (see `samples/README.md` for what's
+been added this way and why), same bulk-generation exception as specs
+and lectures. Deliberately not done where a real external source is
+the actual point of the project (real malware/log/dataset sources) —
+faking that would undermine what the acceptance criteria test.
 
 ## Forking this for yourself
 

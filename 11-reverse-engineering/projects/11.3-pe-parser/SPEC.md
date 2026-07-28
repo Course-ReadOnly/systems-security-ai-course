@@ -39,6 +39,18 @@ wrapped in.
 - [ ] README explaining why the import table matters for malware
       triage, in your own words — this is direct prep for Stage 12
 
+## Security relevance
+
+Already the load-bearing point of Requirement 2: an import table is
+often the fastest, cheapest signal in malware triage — `WinHTTP`/
+`WinInet` imports suggest network capability, `CreateRemoteThread`/
+`WriteProcessMemory` suggest process injection, `CryptEncrypt`-family
+imports suggest ransomware, all readable before a single instruction is
+disassembled. Requirement 5 (handling corrupted/truncated files) is the
+same untrusted-input discipline as every other parser in this course —
+here the stakes are higher, since the files this parser will eventually
+see in Stage 12 are actively hostile, not just imperfect.
+
 ## When done
 
 Point me at the source + `git log` and the cross-checks. Import-table

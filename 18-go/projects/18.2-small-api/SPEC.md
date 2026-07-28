@@ -35,6 +35,18 @@ immediately for a framework, so the underlying mechanics stay visible.
       races
 - [ ] `git log` shows iteration
 
+## Security relevance
+
+Requirement 3 (input validation returning `400`, not a panic) is basic
+untrusted-input discipline applied to a web API instead of a file
+parser — a malformed request crashing the whole server is a real
+denial-of-service, not just a correctness bug. Requirement 5's
+concurrent-safety requirement is a direct application of
+`SECURITY-CONCEPTS.md`'s "Race Conditions" entry: unsynchronized access
+to shared in-memory state from concurrent request handlers is exactly
+the TOCTOU-shaped bug that entry describes, just triggered by concurrent
+HTTP requests instead of a filesystem race.
+
 ## When done
 
 Point me at the source + `git log` and the race-detector output if
